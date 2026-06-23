@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — easyscapes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --charcoal:#1a1c1a;--charcoal-mid:#232523;--charcoal-light:#2e302e;
+  --beige:#f5f2ec;--beige-dark:#ede9e1;--white:#ffffff;
+  --text-dark:#1a1c1a;--text-mid:#4a4d4a;--text-light:#7a7d7a;
+  --forest:#2d4a2d;--gold:#b8941f;--font:'Inter',sans-serif;
+}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font);background:var(--beige);color:var(--text-dark);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--charcoal);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:72px;border-bottom:1px solid rgba(255,255,255,0.07);}
+.nav-logo{font-size:22px;font-weight:800;color:var(--white);letter-spacing:-0.5px;text-decoration:none;cursor:pointer;}
+.nav-logo sup{font-size:10px;font-weight:500;opacity:0.7;vertical-align:super;}
+.nav-links{display:flex;gap:34px;list-style:none;}
+.nav-links a{color:rgba(255,255,255,0.65);text-decoration:none;font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;transition:color 0.2s;cursor:pointer;}
+.nav-links a:hover{color:var(--white);}
+.nav-cta{background:var(--forest)!important;color:var(--white)!important;padding:10px 18px;border-radius:4px;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;}
+.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;background:var(--charcoal);z-index:999;padding:24px 32px 32px;flex-direction:column;gap:0;border-bottom:1px solid rgba(255,255,255,0.1);}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:14px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.07);cursor:pointer;}
+
+/* PAGES */
+.page{display:none;padding-top:72px;}
+.page.active{display:block;}
+
+/* SHARED */
+section{padding:96px 48px;}
+.section-inner{max-width:1200px;margin:0 auto;}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--forest);margin-bottom:16px;display:block;}
+.eyebrow--dim{color:rgba(255,255,255,0.3);}
+.section-title{font-size:clamp(30px,4vw,50px);font-weight:800;letter-spacing:-1.5px;line-height:1.05;color:var(--text-dark);margin-bottom:24px;}
+.section-title--white{color:var(--white);}
+.section-body{font-size:16px;color:var(--text-mid);max-width:640px;line-height:1.75;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:56px;}
+.btn{display:inline-block;padding:15px 28px;border-radius:4px;font-size:14px;font-weight:700;letter-spacing:0.04em;text-decoration:none;border:none;cursor:pointer;font-family:var(--font);transition:all 0.2s;}
+.btn-white{background:var(--white);color:var(--charcoal);}
+.btn-white:hover{background:var(--beige);transform:translateY(-1px);}
+.btn-dark{background:var(--charcoal);color:var(--white);}
+.btn-dark:hover{background:var(--charcoal-light);}
+.btn-ghost{background:transparent;color:rgba(255,255,255,0.65);border:1px solid rgba(255,255,255,0.2);}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.5);color:var(--white);}
+
+/* HERO */
+.hero{background:var(--charcoal);min-height:calc(100vh - 72px);display:flex;align-items:center;padding:80px 48px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(45,74,45,0.18) 0%,transparent 60%);pointer-events:none;}
+.hero-inner{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;}
+.hero-brand{font-size:clamp(52px,7vw,88px);font-weight:900;color:var(--white);letter-spacing:-3px;line-height:0.92;margin-bottom:28px;}
+.hero-brand sup{font-size:0.25em;font-weight:400;opacity:0.6;vertical-align:super;letter-spacing:0;}
+.hero-tag{font-size:18px;color:rgba(255,255,255,0.6);margin-bottom:10px;line-height:1.5;}
+.hero-tag strong{color:rgba(255,255,255,0.9);font-weight:600;}
+.hero-sub{font-size:15px;color:rgba(255,255,255,0.4);margin-bottom:44px;}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+.step-circles{display:flex;flex-direction:row;align-items:center;gap:0;}
+.step-circle{width:112px;height:112px;border-radius:50%;background:#2d4a2d;border:2px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-size:13px;color:rgba(255,255,255,0.9);font-weight:600;text-align:center;padding:14px;line-height:1.35;flex-shrink:0;}
+.step-line{width:32px;height:1px;background:rgba(255,255,255,0.15);margin:0;}
+
+/* ABOUT */
+.about-text p{font-size:16px;color:var(--text-mid);line-height:1.8;margin-bottom:18px;}
+.about-bold{font-size:19px;font-weight:700;color:var(--text-dark);margin:6px 0 18px;letter-spacing:-0.3px;}
+.info-card{border-radius:6px;padding:26px 30px;margin-bottom:18px;}
+.info-card--dark{background:var(--charcoal);}
+.info-card--dark h3{color:var(--white);font-size:14px;font-weight:700;margin-bottom:8px;}
+.info-card--dark p{color:rgba(255,255,255,0.55);font-size:14px;line-height:1.7;}
+.info-card--light{background:var(--white);border:1px solid var(--beige-dark);}
+.info-card--light h3{color:var(--text-dark);font-size:14px;font-weight:700;margin-bottom:8px;}
+.info-card--light p{color:var(--text-mid);font-size:14px;line-height:1.7;}
+.info-card--forest{background:var(--forest);}
+.info-card--forest h3{color:var(--white);font-size:14px;font-weight:700;margin-bottom:8px;}
+.info-card--forest p{color:rgba(255,255,255,0.7);font-size:14px;line-height:1.7;}
+.full-band{width:100%;height:360px;background:linear-gradient(135deg,#1f211f,#2a2c2a,#1a1c1a);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.1);font-size:12px;letter-spacing:0.15em;text-transform:uppercase;font-weight:500;margin-top:72px;}
+
+/* HOW IT WORKS */
+.how-step{display:flex;gap:22px;padding:26px 0;border-bottom:1px solid var(--beige-dark);}
+.how-step:first-child{padding-top:0;}
+.how-step:last-child{border-bottom:none;}
+.how-num{font-size:30px;font-weight:900;color:var(--beige-dark);line-height:1;min-width:38px;letter-spacing:-2px;}
+.how-content h4{font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:5px;}
+.how-content p{font-size:14px;color:var(--text-mid);line-height:1.7;}
+.how-right p{font-size:16px;color:var(--text-mid);line-height:1.8;margin-bottom:18px;}
+.how-note{background:var(--white);border-radius:6px;padding:22px 26px;border-left:3px solid var(--forest);margin-top:24px;}
+.how-note h4{font-size:14px;font-weight:700;color:var(--text-dark);margin-bottom:6px;}
+.how-note p{font-size:14px;color:var(--text-mid);line-height:1.7;}
+.approach-note{background:var(--beige);border-radius:6px;padding:18px 22px;margin-top:16px;border-left:3px solid var(--forest);font-size:14px;color:var(--text-mid);line-height:1.7;}
+.approach-note strong{color:var(--text-dark);}
+
+/* TEMPLATES */
+.templates-section{background:var(--charcoal);padding:96px 48px;}
+.ti-bar{background:var(--charcoal-mid);border-radius:6px;padding:20px 26px;margin-bottom:40px;display:flex;gap:32px;flex-wrap:wrap;align-items:center;}
+.ti-label{font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);white-space:nowrap;}
+.ti-items{display:flex;gap:16px;flex-wrap:wrap;}
+.ti-item{font-size:13px;color:rgba(255,255,255,0.7);font-weight:500;display:flex;align-items:center;gap:7px;}
+.ti-item::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--forest);flex-shrink:0;}
+.filter-bar{display:flex;gap:8px;margin-bottom:40px;flex-wrap:wrap;}
+.filter-btn{padding:8px 16px;border-radius:4px;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border:1px solid rgba(255,255,255,0.15);background:transparent;color:rgba(255,255,255,0.5);transition:all 0.2s;font-family:var(--font);}
+.filter-btn:hover,.filter-btn.active{background:var(--forest);border-color:var(--forest);color:var(--white);}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.tcard{background:var(--white);border-radius:8px;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;cursor:pointer;}
+.tcard:hover{transform:translateY(-4px);box-shadow:0 20px 48px rgba(0,0,0,0.4);}
+.tcard-img{width:100%;aspect-ratio:16/10;position:relative;display:flex;align-items:center;justify-content:center;font-size:11px;color:rgba(255,255,255,0.12);letter-spacing:0.1em;text-transform:uppercase;}
+.tcard-rating{position:absolute;top:10px;right:10px;background:var(--white);border-radius:20px;padding:3px 9px;font-size:12px;font-weight:600;color:var(--text-dark);}
+.tcard-rating::before{content:'★ ';color:var(--gold);}
+.tcard-body{padding:20px;}
+.tcard-header{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:8px;}
+.tcard-name{font-size:17px;font-weight:800;color:var(--forest);letter-spacing:-0.4px;line-height:1.2;}
+.tcard-plus{width:32px;height:32px;border-radius:50%;background:var(--forest);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:300;flex-shrink:0;transition:background 0.2s;cursor:pointer;}
+.tcard-plus:hover{background:#1f3a1f;}
+.tcard-price{display:inline-block;background:var(--gold);color:var(--white);font-size:12px;font-weight:700;padding:4px 11px;border-radius:20px;margin-bottom:10px;}
+.tcard-desc{font-size:13px;color:var(--text-mid);line-height:1.65;margin-bottom:12px;}
+.tcard-tags{display:flex;flex-wrap:wrap;gap:5px;}
+.tcard-tag{font-size:11px;color:var(--text-light);background:var(--beige);padding:3px 9px;border-radius:20px;font-weight:500;}
+.tcard-maint{display:flex;align-items:center;gap:6px;margin-top:11px;padding-top:11px;border-top:1px solid var(--beige-dark);font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-light);}
+.mdots{display:flex;gap:3px;}
+.mdot{width:7px;height:7px;border-radius:50%;background:var(--beige-dark);}
+.mdot.on{background:var(--forest);}
+
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:2000;overflow-y:auto;padding:80px 24px 40px;}
+.modal-overlay.open{display:block;}
+.modal{background:var(--white);border-radius:8px;max-width:960px;margin:0 auto;overflow:hidden;}
+.modal-top{display:grid;grid-template-columns:1fr 1fr;}
+.modal-img{min-height:400px;display:flex;align-items:center;justify-content:center;font-size:11px;color:rgba(255,255,255,0.12);letter-spacing:0.1em;text-transform:uppercase;}
+.modal-body{padding:38px 32px;}
+.modal-close{background:none;border:none;font-size:26px;cursor:pointer;color:var(--text-light);float:right;line-height:1;transition:color 0.2s;margin-bottom:14px;}
+.modal-close:hover{color:var(--text-dark);}
+.modal-name{font-size:24px;font-weight:800;color:var(--forest);letter-spacing:-0.8px;margin-bottom:5px;clear:both;}
+.modal-price-badge{display:inline-block;background:var(--gold);color:var(--white);font-size:13px;font-weight:700;padding:4px 13px;border-radius:20px;margin-bottom:14px;}
+.modal-includes{background:var(--beige);border-radius:6px;padding:14px 18px;margin-bottom:14px;}
+.modal-includes-label{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-light);margin-bottom:8px;}
+.modal-includes-list{list-style:none;display:flex;flex-direction:column;gap:5px;}
+.modal-includes-list li{font-size:13px;font-weight:600;color:var(--text-dark);display:flex;align-items:center;gap:7px;}
+.modal-includes-list li::before{content:'✓';color:var(--forest);font-size:12px;font-weight:700;}
+.modal-desc{font-size:14px;color:var(--text-mid);line-height:1.7;margin-bottom:12px;}
+.modal-feats{list-style:none;margin-bottom:16px;}
+.modal-feats li{font-size:14px;color:var(--text-mid);padding:4px 0 4px 14px;position:relative;}
+.modal-feats li::before{content:'·';position:absolute;left:0;color:var(--forest);font-size:18px;line-height:1.2;font-weight:700;}
+.modal-upgrade{background:var(--forest);color:var(--white);border-radius:6px;padding:10px 14px;font-size:13px;font-weight:700;text-align:center;margin-bottom:10px;}
+.modal-buy{display:block;width:100%;background:var(--charcoal);color:var(--white);text-align:center;padding:14px;border-radius:6px;font-size:14px;font-weight:700;letter-spacing:0.04em;border:none;cursor:pointer;font-family:var(--font);transition:background 0.2s;}
+.modal-buy:hover{background:var(--charcoal-light);}
+.modal-vis{background:var(--charcoal);padding:24px 32px;}
+.modal-vis h4{font-size:14px;font-weight:700;color:var(--white);margin-bottom:7px;}
+.modal-vis p{font-size:13px;color:rgba(255,255,255,0.4);line-height:1.65;margin-bottom:12px;}
+.vis-area{background:var(--charcoal-mid);border-radius:6px;border:1px dashed rgba(255,255,255,0.15);padding:22px;text-align:center;cursor:pointer;}
+.vis-area:hover{border-color:rgba(255,255,255,0.3);}
+.vis-area p{font-size:13px;color:rgba(255,255,255,0.2);margin:0;}
+.vis-icon{font-size:22px;opacity:0.2;margin-bottom:6px;}
+
+/* FAQ */
+.faq-section{background:var(--white);}
+.faq-list{max-width:760px;margin-top:52px;}
+.faq-item{border-bottom:1px solid var(--beige-dark);}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:20px 0;cursor:pointer;gap:22px;}
+.faq-q h4{font-size:16px;font-weight:600;color:var(--text-dark);line-height:1.4;}
+.faq-toggle{width:28px;height:28px;border-radius:50%;background:var(--beige);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;color:var(--text-mid);transition:all 0.2s;line-height:1;}
+.faq-item.open .faq-toggle{background:var(--forest);color:var(--white);transform:rotate(45deg);}
+.faq-a{display:none;padding:0 0 20px;font-size:15px;color:var(--text-mid);line-height:1.75;}
+.faq-item.open .faq-a{display:block;}
+
+/* DISCLAIMER */
+.disclaimer{background:var(--beige-dark);padding:52px 48px;}
+.disclaimer-inner{max-width:800px;margin:0 auto;}
+.disc-label{font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-light);margin-bottom:12px;display:block;}
+.disclaimer-inner p{font-size:13px;color:var(--text-light);line-height:1.75;}
+
+/* FIKY BAND */
+.fiky-band{background:var(--charcoal);padding:64px 48px;}
+.fiky-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:52px;align-items:center;}
+.fiky-text h3{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:12px;}
+.fiky-text h2{font-size:24px;font-weight:800;color:var(--white);letter-spacing:-0.7px;margin-bottom:10px;}
+.fiky-text p{font-size:15px;color:rgba(255,255,255,0.5);line-height:1.7;max-width:480px;}
+.fiky-cta{background:var(--white);color:var(--charcoal);padding:14px 26px;border-radius:4px;font-size:14px;font-weight:700;letter-spacing:0.04em;text-decoration:none;display:inline-block;white-space:nowrap;transition:background 0.2s;}
+.fiky-cta:hover{background:var(--beige);}
+
+/* CONTACT */
+.contact-section{background:var(--beige);min-height:calc(100vh - 72px);}
+.contact-intro p{font-size:16px;color:var(--text-mid);line-height:1.8;margin-bottom:16px;}
+.contact-detail{display:flex;flex-direction:column;gap:18px;margin-top:28px;}
+.contact-item label{font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-light);display:block;margin-bottom:3px;}
+.contact-item a,.contact-item span{font-size:15px;color:var(--text-dark);font-weight:500;text-decoration:none;}
+.contact-item a:hover{color:var(--forest);}
+.contact-form{background:var(--white);border-radius:8px;padding:36px;}
+.form-group{margin-bottom:16px;}
+.form-group label{display:block;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-mid);margin-bottom:6px;}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:11px 14px;border:1px solid var(--beige-dark);border-radius:4px;font-family:var(--font);font-size:15px;color:var(--text-dark);background:var(--beige);outline:none;transition:border-color 0.2s;-webkit-appearance:none;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--forest);background:var(--white);}
+.form-group textarea{height:110px;resize:vertical;}
+.form-submit{background:var(--charcoal);color:var(--white);border:none;padding:14px 26px;border-radius:4px;font-family:var(--font);font-size:14px;font-weight:700;letter-spacing:0.04em;cursor:pointer;transition:background 0.2s;width:100%;}
+.form-submit:hover{background:var(--charcoal-light);}
+
+/* FOOTER */
+footer{background:var(--charcoal);padding:52px 48px 26px;}
+.footer-inner{max-width:1200px;margin:0 auto;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);margin-bottom:26px;}
+.footer-brand{font-size:19px;font-weight:800;color:var(--white);letter-spacing:-0.5px;margin-bottom:12px;display:block;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,0.25);line-height:1.7;max-width:240px;}
+.footer-col h4{font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:14px;}
+.footer-col ul{list-style:none;}
+.footer-col ul li{margin-bottom:8px;}
+.footer-col ul li a{color:rgba(255,255,255,0.45);text-decoration:none;font-size:13px;transition:color 0.2s;cursor:pointer;}
+.footer-col ul li a:hover{color:var(--white);}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.footer-copy{font-size:12px;color:rgba(255,255,255,0.18);}
+.footer-links{display:flex;gap:20px;}
+.footer-links a{font-size:12px;color:rgba(255,255,255,0.18);text-decoration:none;transition:color 0.2s;cursor:pointer;}
+.footer-links a:hover{color:rgba(255,255,255,0.5);}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  nav{padding:0 24px;}
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  section{padding:64px 24px;}
+  .hero{padding:52px 24px;min-height:auto;}
+  .hero-inner,.two-col{grid-template-columns:1fr;gap:40px;}
+  .step-circles{justify-content:center;}
+  .step-circle{width:90px;height:90px;font-size:11px;}
+  .tgrid{grid-template-columns:repeat(2,1fr);}
+  .modal-top{grid-template-columns:1fr;}
+  .modal-img{min-height:220px;}
+  .fiky-inner{grid-template-columns:1fr;gap:20px;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:28px;}
+  .templates-section,.fiky-band,.disclaimer{padding:64px 24px;}
+}
+@media(max-width:600px){
+  .tgrid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .hero-brand{font-size:44px;letter-spacing:-2px;}
+  .ti-bar{flex-direction:column;gap:12px;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">easyscapes<sup>TM</sup></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="templates.html">Templates</a></li>
+    <li><a href="how.html">How It Works</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger-btn">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="about.html">About</a>
+  <a href="templates.html">Templates</a>
+  <a href="how.html">How It Works</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+</div>
+<div style="padding-top:72px;">
+  <section style="background:var(--beige);min-height:calc(100vh - 72px);">
+    <div class="section-inner">
+      <span class="eyebrow">Contact</span>
+      <h2 class="section-title">Get in touch.</h2>
+      <div class="two-col">
+        <div class="contact-intro">
+          <p>Have a question about a template, your block size, or the purchase process? We are here to help.</p>
+          <p>Use the form and we will get back to you within one business day.</p>
+          <p>For fully custom landscape design, visit our sister studio FIKY Landscape Design at <a href="https://fikylandscapedesign.com" target="_blank" style="color:var(--forest);font-weight:600;">fikylandscapedesign.com</a>.</p>
+          <div class="contact-detail">
+            <div class="contact-item"><label>Email</label><a href="mailto:hello@fikylandscapedesign.com">hello@fikylandscapedesign.com</a></div>
+            <div class="contact-item"><label>Based In</label><span>Adelaide, South Australia</span></div>
+            <div class="contact-item"><label>Custom Design</label><a href="https://fikylandscapedesign.com" target="_blank">fikylandscapedesign.com</a></div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact">
+            <p style="display:none"><input name="bot-field"></p>
+            <div class="form-group"><label>Your Name</label><input type="text" name="name" placeholder="Jane Smith" required></div>
+            <div class="form-group"><label>Email Address</label><input type="email" name="email" placeholder="jane@email.com" required></div>
+            <div class="form-group"><label>Subject</label><select name="subject"><option>Question about a template</option><option>Block size query</option><option>Purchase help</option><option>Something else</option></select></div>
+            <div class="form-group"><label>Message</label><textarea name="message" placeholder="Tell us what you need..." required></textarea></div>
+            <button type="submit" class="form-submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section><div class="fiky-band"><div class="fiky-inner"><div class="fiky-text"><h3>Custom Design</h3><h2>Need something bespoke?</h2><p>For sites that need a fully custom solution, our sister studio FIKY Landscape Design can help.</p></div><a href="https://fikylandscapedesign.com" target="_blank" class="fiky-cta">Visit FIKY Design</a></div></div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <span class="footer-brand">easyscapes</span>
+        <p class="footer-tagline">Landscape Design Made Simple. Beautiful Results Made Affordable. Ready-made garden templates for new home builders across Australia.</p>
+      </div>
+      <div class="footer-col"><h4>Navigate</h4><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="templates.html">Templates</a></li>
+        <li><a href="how.html">How It Works</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Templates</h4><ul>
+        <li><a href="templates.html">Contemporary Coastal</a></li>
+        <li><a href="templates.html">Hamptons</a></li>
+        <li><a href="templates.html">Mediterranean</a></li>
+        <li><a href="templates.html">Tropical Resort</a></li>
+        <li><a href="templates.html">View All</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Get In Touch</h4><ul>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="https://fikylandscapedesign.com" target="_blank">FIKY Landscape Design</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">2026 easyscapes. All rights reserved.</span>
+      <div class="footer-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+    </div>
+  </div>
+</footer>
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" id="modal">
+    <div class="modal-top">
+      <div class="modal-img" id="modal-img">[ Template image ]</div>
+      <div class="modal-body">
+        <button class="modal-close" onclick="closeModal()">&#x2715;</button>
+        <div class="modal-name" id="modal-name"></div>
+        <span class="modal-price-badge" id="modal-price"></span>
+        <div class="modal-includes">
+          <div class="modal-includes-label">Every template includes</div>
+          <ul class="modal-includes-list">
+            <li>Moodboard</li><li>2D Landscape Plan</li><li>Plant Plan</li><li>3D Render</li><li>Maintenance Guide</li>
+          </ul>
+        </div>
+        <p class="modal-desc" id="modal-desc"></p>
+        <ul class="modal-feats" id="modal-feats"></ul>
+        <div class="modal-upgrade">FREE UPGRADE TO BACKYARD DESIGN</div>
+        <button class="modal-buy" id="modal-buy">Purchase Template</button>
+      </div>
+    </div>
+    <div class="modal-vis">
+      <h4>Want to see it on your home?</h4>
+      <p>Upload a photo of the front of your home and see how the design could look before you buy.</p>
+      <div class="vis-area" onclick="closeModal()">
+        <div class="vis-icon">&#8593;</div>
+        <p>Upload your home photo here</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  // Hamburger menu
+  var btn = document.getElementById('hamburger-btn');
+  var menu = document.getElementById('mobile-menu');
+  if (btn) {
+    btn.addEventListener('click', function() {
+      menu.classList.toggle('open');
+    });
+  }
+
+  // FAQ accordion
+  var qs = document.querySelectorAll('.faq-q');
+  for (var i = 0; i < qs.length; i++) {
+    qs[i].addEventListener('click', function() {
+      var item = this.parentElement;
+      var was = item.classList.contains('open');
+      var all = document.querySelectorAll('.faq-item');
+      for (var j = 0; j < all.length; j++) all[j].classList.remove('open');
+      if (!was) item.classList.add('open');
+    });
+  }
+
+  // Template filter
+  var fbns = document.querySelectorAll('.filter-btn');
+  for (var i = 0; i < fbns.length; i++) {
+    fbns[i].addEventListener('click', function() {
+      for (var j = 0; j < fbns.length; j++) fbns[j].classList.remove('active');
+      this.classList.add('active');
+      var level = this.getAttribute('data-filter');
+      var cards = document.querySelectorAll('.tcard');
+      for (var k = 0; k < cards.length; k++) {
+        cards[k].style.display = (level === 'all' || cards[k].getAttribute('data-m') === level) ? 'block' : 'none';
+      }
+    });
+  }
+
+  // Modal
+  var tdata = {
+    'contemporary-coastal':{name:'Contemporary Coastal',price:'$249',desc:'Blends relaxed seaside character with clean, modern design. Soft planting palettes, natural textures and layered greenery.',features:['Clean lines and structure','Architectural plants','Concrete, steel, corten, stone','Minimalist planting with strong form'],bg:'linear-gradient(135deg,#3a4a3a,#2a3a2a)'},
+    'tropical':{name:'Tropical Resort',price:'$249',desc:'A lush, resort-inspired retreat with layered foliage, bold textures and vibrant greenery.',features:['Lush, vibrant and resort-style','Feature palms and tropical foliage','Rich textures and bold leaves','All-year round greenery'],bg:'linear-gradient(135deg,#2a3a2a,#1a2a1a)'},
+    'modern-australian':{name:'Modern Australian',price:'$249',desc:'Native and complementary plantings, clean lines and natural materials — functional, low-maintenance and distinctly Australian.',features:['Calm and minimalist','Native and complementary plants','Clean lines and natural materials','Low maintenance'],bg:'linear-gradient(135deg,#3a3a2a,#2a2a1a)'},
+    'native-australian':{name:'Native Australian',price:'$199',desc:'Celebrates the beauty of Australia flora with textured foliage, seasonal colour and drought-tolerant plantings.',features:['Indigenous and Australian plants','Low water requirements','Habitat for birds and pollinators','Naturalistic appearance'],bg:'linear-gradient(135deg,#3a3520,#2a2818)'},
+    'cottage-garden':{name:'Cottage Garden',price:'$199',desc:'Charming and abundant — layers of colourful flowering plants and timeless garden favourites create a warm, inviting space.',features:['Romantic and abundant','Roses, salvias, foxgloves, lavender','Informal and layered planting','Seasonal colour throughout'],bg:'linear-gradient(135deg,#3a2a3a,#2a1a2a)'},
+    'mediterranean':{name:'Mediterranean Charm',price:'$199',desc:'Timeless elegance with relaxed outdoor living. Drought-tolerant species, natural stone and warm earthy tones.',features:['Inspired by southern Europe','Olive trees, lavender, rosemary, citrus','Gravel pathways and natural stone','Drought tolerant'],bg:'linear-gradient(135deg,#3a3020,#2a2018)'},
+    'palm-springs':{name:'Palm Springs',price:'$199',desc:'Desert luxury with sculptural plants, clean lines and a curated palette of textures.',features:['Mid-century modern influence','Feature cacti, succulents and palms','Bold colours and geometric forms','Decorative gravel and concrete'],bg:'linear-gradient(135deg,#3a2820,#2a1a15)'},
+    'japanese-zen':{name:'Japanese Zen',price:'$199',desc:'Balance, tranquillity and connection to nature. Plants, stone, water and natural elements create a peaceful sanctuary.',features:['Calm and minimalist','Maples, moss, bamboo, stone lanterns','Emphasis on balance and serenity','Strong connection to nature'],bg:'linear-gradient(135deg,#2a3028,#1a2018)'},
+    'hamptons':{name:'Hamptons',price:'$249',desc:'Elegant coastal style with white fencing, hydrangeas, box hedging and magnolias.',features:['Elegant coastal style','White fencing and weatherboard elements','Hydrangeas, box hedging, magnolias','Symmetrical and refined'],bg:'linear-gradient(135deg,#303540,#202530)'},
+    'formal-european':{name:'Formal European',price:'$249',desc:'Symmetry, structure and timeless grandeur with manicured hedging and elegant plantings.',features:['Symmetry and structure','Topiary, clipped hedges and avenues','Grand entrances and focal points','Highly manicured'],bg:'linear-gradient(135deg,#303530,#202520)'}
+  };
+
+  window.openModal = function(id) {
+    var d = tdata[id];
+    if (!d) return;
+    document.getElementById('modal-name').textContent = d.name;
+    document.getElementById('modal-price').textContent = d.price;
+    document.getElementById('modal-desc').textContent = d.desc;
+    document.getElementById('modal-img').style.background = d.bg;
+    var feats = '';
+    for (var i = 0; i < d.features.length; i++) feats += '<li>' + d.features[i] + '</li>';
+    document.getElementById('modal-feats').innerHTML = feats;
+    document.getElementById('modal-buy').textContent = 'Purchase — ' + d.name + ' ' + d.price;
+    document.getElementById('modal-overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  window.closeModal = function() {
+    document.getElementById('modal-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  var ov = document.getElementById('modal-overlay');
+  if (ov) ov.addEventListener('click', function(e) { if (e.target === ov) closeModal(); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+
+});
+</script>
+</body>
+</html>
