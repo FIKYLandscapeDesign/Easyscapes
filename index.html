@@ -545,7 +545,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var tdata = {
     "contemporary-coastal":{img:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/contemporary-coastal-hero.png",name:"Contemporary Coastal",keywords:"Relaxed / Refined / Natural",price:"$79",stripe:"https://buy.stripe.com/REPLACE_contemporary_coastal",desc:"Blends relaxed seaside character with clean, modern design. Soft planting palettes, natural textures and layered greenery.",features:["moodboard","plant plan","3D render"],bg:"#8fa89a"},
-    "tropical":{name:"Tropical Resort",keywords:"Lush / Vibrant / Resort-Inspired",price:"$79",stripe:"https://buy.stripe.com/REPLACE_tropical_resort",desc:"A lush, resort-inspired retreat with layered foliage, bold textures and vibrant greenery.",features:["moodboard","plant plan","3D render"],bg:"#6b8f6b"},
+    "tropical":{moodboard:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/moodboard-tropical-draft.png",plantplan:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/easyscapes-plant-plan.png",name:"Tropical Resort",keywords:"Lush / Vibrant / Resort-Inspired",price:"$79",stripe:"https://buy.stripe.com/REPLACE_tropical_resort",desc:"A lush, resort-inspired retreat with layered foliage, bold textures and vibrant greenery.",features:["moodboard","plant plan","3D render"],bg:"#6b8f6b"},
     "modern-australian":{name:"Modern Australian",keywords:"Textural / Contemporary / Resilient",price:"$79",stripe:"https://buy.stripe.com/REPLACE_modern_australian",desc:"Native and complementary plantings, clean lines and natural materials. Functional, low-maintenance and distinctly Australian.",features:["moodboard","plant plan","3D render"],bg:"#a89878"},
     "palm-springs":{name:"Palm Springs",keywords:"Sculptural / Desert-Inspired / Bold",price:"$79",stripe:"https://buy.stripe.com/REPLACE_palm_springs",desc:"Desert luxury with sculptural plants, clean lines and a curated palette of textures.",features:["moodboard","plant plan","3D render"],bg:"#c4a882"},
     "mediterranean":{name:"Mediterranean Charm",keywords:"Relaxed / Timeless / Organic",price:"$79",stripe:"https://buy.stripe.com/REPLACE_mediterranean_charm",desc:"Timeless elegance with relaxed outdoor living. Drought-tolerant species, natural stone and warm earthy tones.",features:["moodboard","plant plan","3D render"],bg:"#b0a882"},
@@ -573,6 +573,17 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('modal-feats').innerHTML = feats;
     document.getElementById('modal-desc').textContent = d.desc;
     document.getElementById('modal-buy-btn').href = d.stripe;
+    // Show moodboard and plant plan if available
+    var extras = document.getElementById('modal-extras');
+    var moodboardImg = document.getElementById('modal-moodboard');
+    var plantplanImg = document.getElementById('modal-plantplan');
+    if (d.moodboard && extras) {
+      moodboardImg.src = d.moodboard;
+      plantplanImg.src = d.plantplan || '';
+      extras.style.display = 'block';
+    } else if (extras) {
+      extras.style.display = 'none';
+    }
     document.getElementById('modal-overlay').classList.add('open');
     document.body.style.overflow = 'hidden';
   };
