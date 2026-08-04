@@ -492,16 +492,105 @@ footer{background:var(--dark);padding:52px 56px 28px;}
         <div class="modal-name" id="modal-name"></div>
         <div class="modal-price-row">
           <div class="modal-price" id="modal-price"></div>
-          <div class="modal-price-note">Front yard · instant download</div>
+          <div class="modal-price-note">Front yard · personalised to your block</div>
         </div>
         <div class="modal-includes">
           <div class="modal-includes-label">What's included</div>
           <ul class="modal-includes-list" id="modal-feats"></ul>
         </div>
         <p class="modal-desc" id="modal-desc"></p>
-        <p class="modal-block-note">Designed for blocks <strong>8m–15m wide</strong>. Can usually be adapted to suit your block.</p>
+
+        <!-- BLOCK DETAILS FORM -->
+        <div style="background:#f8f8f6;border:1px solid #e4e4e0;border-radius:4px;padding:16px 18px;margin-bottom:14px;">
+          <p style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#9a9a9a;margin-bottom:14px;">Tell us about your block</p>
+
+          <!-- Name and email -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+            <div>
+              <label style="font-size:11px;font-weight:600;color:#5a5a5a;display:block;margin-bottom:4px;">Your name</label>
+              <input type="text" id="block-name" placeholder="Jane Smith"
+                style="width:100%;padding:9px 11px;border:1.5px solid #e4e4e0;border-radius:3px;font-family:'Inter',sans-serif;font-size:13px;color:#1a1a1a;background:#fff;outline:none;">
+            </div>
+            <div>
+              <label style="font-size:11px;font-weight:600;color:#5a5a5a;display:block;margin-bottom:4px;">Email address</label>
+              <input type="email" id="block-email" placeholder="jane@email.com"
+                style="width:100%;padding:9px 11px;border:1.5px solid #e4e4e0;border-radius:3px;font-family:'Inter',sans-serif;font-size:13px;color:#1a1a1a;background:#fff;outline:none;">
+            </div>
+          </div>
+
+          <!-- Block dimensions -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+            <div>
+              <label style="font-size:11px;font-weight:600;color:#5a5a5a;display:block;margin-bottom:4px;">Block width (metres)</label>
+              <input type="number" id="block-width" placeholder="e.g. 12" min="8" max="15" step="0.5"
+                style="width:100%;padding:9px 11px;border:1.5px solid #e4e4e0;border-radius:3px;font-family:'Inter',sans-serif;font-size:13px;color:#1a1a1a;background:#fff;outline:none;">
+            </div>
+            <div>
+              <label style="font-size:11px;font-weight:600;color:#5a5a5a;display:block;margin-bottom:4px;">Front yard depth (metres)</label>
+              <input type="number" id="block-depth" placeholder="e.g. 7" min="3" max="15" step="0.5"
+                style="width:100%;padding:9px 11px;border:1.5px solid #e4e4e0;border-radius:3px;font-family:'Inter',sans-serif;font-size:13px;color:#1a1a1a;background:#fff;outline:none;">
+            </div>
+          </div>
+
+          <!-- Driveway type -->
+          <div style="margin-bottom:10px;">
+            <label style="font-size:11px;font-weight:600;color:#5a5a5a;display:block;margin-bottom:6px;">Driveway type</label>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;">
+              <button type="button" class="drive-opt" onclick="selectDrive(this,'single')"
+                style="padding:7px 14px;border:1.5px solid #e4e4e0;border-radius:3px;background:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:#5a5a5a;cursor:pointer;">
+                Single
+              </button>
+              <button type="button" class="drive-opt" onclick="selectDrive(this,'double')"
+                style="padding:7px 14px;border:1.5px solid #e4e4e0;border-radius:3px;background:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:#5a5a5a;cursor:pointer;">
+                Double
+              </button>
+            </div>
+          </div>
+
+          <!-- Driveway side -->
+          <div>
+            <label style="font-size:11px;font-weight:600;color:#5a5a5a;display:block;margin-bottom:6px;">Driveway position</label>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;">
+              <button type="button" class="side-opt" onclick="selectSide(this,'left')"
+                style="padding:7px 14px;border:1.5px solid #e4e4e0;border-radius:3px;background:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:#5a5a5a;cursor:pointer;">
+                Left
+              </button>
+              <button type="button" class="side-opt" onclick="selectSide(this,'centre')"
+                style="padding:7px 14px;border:1.5px solid #e4e4e0;border-radius:3px;background:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:#5a5a5a;cursor:pointer;">
+                Centre
+              </button>
+              <button type="button" class="side-opt" onclick="selectSide(this,'right')"
+                style="padding:7px 14px;border:1.5px solid #e4e4e0;border-radius:3px;background:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:#5a5a5a;cursor:pointer;">
+                Right
+              </button>
+            </div>
+          </div>
+
+          <input type="hidden" id="block-driveway-type" value="">
+          <input type="hidden" id="block-driveway-side" value="">
+        </div>
+
+        <!-- Discount box -->
+        <div id="modal-discount-box" style="background:#f8f8f6;border:1.5px dashed #e4e4e0;border-radius:4px;padding:14px 16px;margin-bottom:12px;">
+          <div id="modal-discount-form">
+            <p style="font-size:12px;font-weight:700;color:#1a1a1a;margin-bottom:4px;">Get this for $59 — save $20</p>
+            <p style="font-size:11px;color:#9a9a9a;margin-bottom:10px;">Enter your email above and click "Get code" to save $20.</p>
+          </div>
+          <div id="modal-discount-code" style="display:none;">
+            <p style="font-size:12px;font-weight:700;color:#1a1a1a;margin-bottom:6px;">Your discount code</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
+              <span style="font-size:20px;font-weight:900;letter-spacing:0.1em;color:#1a1a1a;">GARDEN59</span>
+              <button onclick="copyModalCode()"
+                style="background:#1a1a1a;color:#fff;border:none;padding:7px 14px;border-radius:3px;font-family:'Inter',sans-serif;font-size:11px;font-weight:700;cursor:pointer;">
+                Copy
+              </button>
+            </div>
+            <p style="font-size:11px;color:#9a9a9a;margin-top:6px;">Enter this code at checkout to pay $59 instead of $79.</p>
+          </div>
+        </div>
+
         <p style="font-size:11px;color:var(--light);line-height:1.6;margin-bottom:8px;">By purchasing you agree to our <a href="terms.html" style="color:var(--dark);font-weight:600;text-decoration:underline;text-underline-offset:2px;">terms &amp; conditions</a>. All sales are final — no refunds once files are delivered.</p>
-        <a class="btn-buy-modal" id="modal-buy-btn" href="#" target="_blank">Purchase — $79</a>
+        <button class="btn-buy-modal" id="modal-buy-btn" onclick="submitAndPurchase()">Purchase — $79</button>
         <div class="modal-contact-note">Questions? <a href="contact.html">Get in touch</a></div>
       </div>
     </div>
@@ -600,7 +689,7 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var i = 0; i < d.features.length; i++) feats += '<li>' + d.features[i] + '</li>';
     document.getElementById('modal-feats').innerHTML = feats;
     document.getElementById('modal-desc').textContent = d.desc;
-    document.getElementById('modal-buy-btn').href = d.stripe;
+    document.getElementById('modal-buy-btn').setAttribute('data-stripe', d.stripe);
     // Show moodboard and plant plan if available
     var extras = document.getElementById('modal-extras');
     var moodboardImg = document.getElementById('modal-moodboard');
@@ -612,6 +701,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else if (extras) {
       extras.style.display = 'none';
     }
+    checkModalDiscount();
     document.getElementById('modal-overlay').classList.add('open');
     document.body.style.overflow = 'hidden';
   };
@@ -619,6 +709,136 @@ document.addEventListener('DOMContentLoaded', function() {
   window.closeModal = function() {
     document.getElementById('modal-overlay').classList.remove('open');
     document.body.style.overflow = '';
+  };
+
+  // Check on modal open whether they already have the cookie
+  function checkModalDiscount() {
+    function getCookie(name) {
+      var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+      return v ? v[2] : null;
+    }
+    if (getCookie('es_popup_seen')) {
+      // Already signed up — show code directly
+      document.getElementById('modal-discount-form').style.display = 'none';
+      document.getElementById('modal-discount-code').style.display = 'block';
+    } else {
+      document.getElementById('modal-discount-form').style.display = 'block';
+      document.getElementById('modal-discount-code').style.display = 'none';
+    }
+  }
+
+  window.submitModalEmail = function() {
+    var email = document.getElementById('modal-email-input').value;
+    if (!email || !email.includes('@')) {
+      document.getElementById('modal-email-input').style.borderColor = '#cc0000';
+      return;
+    }
+    // Submit to Netlify Forms
+    var data = new FormData();
+    data.append('form-name', 'popup-signup');
+    data.append('email', email);
+    fetch('/', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body: new URLSearchParams(data).toString()
+    }).catch(function() {});
+    // Set cookie and show code
+    var d = new Date();
+    d.setTime(d.getTime() + 24*60*60*1000*30);
+    document.cookie = 'es_popup_seen=1;path=/;expires=' + d.toUTCString();
+    document.getElementById('modal-discount-form').style.display = 'none';
+    document.getElementById('modal-discount-code').style.display = 'block';
+  };
+
+  window.copyModalCode = function() {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText('GARDEN59');
+    } else {
+      var el = document.createElement('textarea');
+      el.value = 'GARDEN59';
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+    }
+    var btn = event.target;
+    btn.textContent = 'Copied!';
+    setTimeout(function() { btn.textContent = 'Copy'; }, 2000);
+  };
+
+  // Driveway selection buttons
+  window.selectDrive = function(el, val) {
+    document.querySelectorAll('.drive-opt').forEach(function(b) {
+      b.style.background = '#fff';
+      b.style.borderColor = '#e4e4e0';
+      b.style.color = '#5a5a5a';
+    });
+    el.style.background = '#1a1a1a';
+    el.style.borderColor = '#1a1a1a';
+    el.style.color = '#fff';
+    document.getElementById('block-driveway-type').value = val;
+  };
+
+  window.selectSide = function(el, val) {
+    document.querySelectorAll('.side-opt').forEach(function(b) {
+      b.style.background = '#fff';
+      b.style.borderColor = '#e4e4e0';
+      b.style.color = '#5a5a5a';
+    });
+    el.style.background = '#1a1a1a';
+    el.style.borderColor = '#1a1a1a';
+    el.style.color = '#fff';
+    document.getElementById('block-driveway-side').value = val;
+  };
+
+  // Submit block details to Netlify then redirect to Stripe
+  window.submitAndPurchase = function() {
+    var name = document.getElementById('block-name').value.trim();
+    var email = document.getElementById('block-email').value.trim();
+    var width = document.getElementById('block-width').value.trim();
+    var depth = document.getElementById('block-depth').value.trim();
+    var driveType = document.getElementById('block-driveway-type').value;
+    var driveSide = document.getElementById('block-driveway-side').value;
+    var style = document.getElementById('modal-name').textContent;
+
+    // Basic validation
+    if (!name || !email || !width || !depth || !driveType || !driveSide) {
+      alert('Please fill in all fields before purchasing.');
+      return;
+    }
+    if (!email.includes('@')) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    // Submit to Netlify Forms
+    var data = new URLSearchParams();
+    data.append('form-name', 'block-details');
+    data.append('name', name);
+    data.append('email', email);
+    data.append('style', style);
+    data.append('width', width + 'm');
+    data.append('depth', depth + 'm');
+    data.append('driveway-type', driveType);
+    data.append('driveway-side', driveSide);
+
+    fetch('/', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body: data.toString()
+    }).then(function() {
+      // Redirect to Stripe after form submission
+      var stripeUrl = document.getElementById('modal-buy-btn').getAttribute('data-stripe');
+      if (stripeUrl && stripeUrl !== '#') {
+        window.open(stripeUrl, '_blank');
+      }
+    }).catch(function() {
+      // Still redirect even if form fails
+      var stripeUrl = document.getElementById('modal-buy-btn').getAttribute('data-stripe');
+      if (stripeUrl && stripeUrl !== '#') {
+        window.open(stripeUrl, '_blank');
+      }
+    });
   };
 
   var ov = document.getElementById('modal-overlay');
@@ -653,7 +873,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </form>
       <!-- Code reveal (hidden until form submitted) -->
       <div id="popup-code-reveal" style="display:none;text-align:center;padding-top:4px;">
-        <p style="font-size:14px;color:#5a5a5a;margin-bottom:16px;line-height:1.65;">Thanks! Here's your code. Use it at checkout to get any template for <strong style="color:#1a1a1a;">$79</strong>.</p>
+        <p style="font-size:14px;color:#5a5a5a;margin-bottom:16px;line-height:1.65;">Here's your code. Use it at checkout to get any template for <strong style="color:#1a1a1a;">$59</strong>.</p>
         <div style="background:#f8f8f6;border:1.5px dashed #e4e4e0;border-radius:4px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;">
           <span id="popup-code-text" style="font-size:22px;font-weight:900;letter-spacing:0.12em;color:#1a1a1a;"></span>
           <button onclick="copyCode()" id="copy-btn"
