@@ -277,6 +277,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
     <li><a href="about.html">About</a></li>
     <li><a href="styles.html">Styles</a></li>
     <li><a href="how.html">How it works</a></li>
+    <li><a href="visualiser.html">Visualiser</a></li>
     <li><a href="faq.html">Faq</a></li>
     <li><a href="contact.html" class="nav-cta">Contact</a></li>
   </ul>
@@ -286,6 +287,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
   <a href="about.html">About</a>
   <a href="styles.html">Styles</a>
   <a href="how.html">How it works</a>
+  <a href="visualiser.html">Visualiser</a>
   <a href="faq.html">Faq</a>
   <a href="contact.html">Contact</a>
 </div>
@@ -297,6 +299,17 @@ footer{background:var(--dark);padding:52px 56px 28px;}
     <p style="font-size:15px;color:var(--mid);">Can't find what you're looking for? <a href="contact.html" style="color:var(--dark);font-weight:600;text-decoration:underline;text-underline-offset:2px;">Get in touch.</a></p>
     <div class="faq-list">
       <div class="faq-item"><div class="faq-q"><h4>What is included in each template?</h4><div class="faq-toggle">+</div></div><div class="faq-a">Every template includes a moodboard, plant plan with species recommendations, and a 3D render of the finished design. All delivered as PDF files instantly after purchase.</div></div>
+      <div class="faq-item">
+        <div class="faq-q"><h4>What is a plant plan?</h4><div class="faq-toggle">+</div></div>
+        <div class="faq-a">
+          <p style="margin-bottom:16px;">A plant plan is a top-down layout of your garden showing exactly which plants go where, how many of each species you need, and how they are spaced. It gives you and your landscaper a clear guide to follow when building your garden.</p>
+          <p style="margin-bottom:16px;">Your plant plan includes species names, quantities and placement — everything needed to purchase plants and get started.</p>
+          <div style="border-radius:4px;overflow:hidden;margin-top:8px;">
+            <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/easyscapes-plant-plan.png" alt="Example plant plan" style="width:100%;height:auto;display:block;border-radius:4px;border:1px solid var(--border);">
+          </div>
+          <p style="font-size:12px;color:var(--light);margin-top:8px;">Example plant plan — species names and quantities are revealed after purchase.</p>
+        </div>
+      </div>
       <div class="faq-item"><div class="faq-q"><h4>Will the template fit my block?</h4><div class="faq-toggle">+</div></div><div class="faq-a">Our templates are designed to work for blocks ranging between 8m and 15m wide. If your block falls outside this range, get in touch and we can advise.</div></div>
       <div class="faq-item"><div class="faq-q"><h4>How do i pay?</h4><div class="faq-toggle">+</div></div><div class="faq-a">We use Stripe for secure payment processing. When you click purchase, you'll be taken to a secure Stripe checkout page to enter your payment details. We accept all major credit and debit cards. You'll never enter card details on the easyscapes site directly.</div></div>
       <div class="faq-item"><div class="faq-q"><h4>How do i get my design after i pay?</h4><div class="faq-toggle">+</div></div><div class="faq-a">After purchase you'll receive an email with a download link to your full design package as high-quality PDF files, ready to use straight away.</div></div>
@@ -357,7 +370,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
         <div class="modal-name" id="modal-name"></div>
         <div class="modal-price-row">
           <div class="modal-price" id="modal-price"></div>
-          <div class="modal-price-note">Front yard · instant download</div>
+          <div class="modal-price-note">Front yard · $79 (use code GARDEN59 for $20 off)</div>
         </div>
         <div class="modal-includes">
           <div class="modal-includes-label">What's included</div>
@@ -369,7 +382,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
           by purchasing you agree to our <a href="terms.html" style="color:var(--dark);font-weight:600;text-decoration:underline;text-underline-offset:2px;">Terms &amp; conditions</a>. All sales are final — no refunds once files are delivered.
         </div>
         <p style="font-size:11px;color:var(--light);line-height:1.6;margin-bottom:8px;">By purchasing you agree to our <a href="terms.html" style="color:var(--dark);font-weight:600;text-decoration:underline;text-underline-offset:2px;">Terms &amp; conditions</a>. All sales are final — no refunds once files are delivered.</p>
-        <a class="btn-buy-modal" id="modal-buy-btn" href="#" target="_blank">Purchase — $59</a>
+        <a class="btn-buy-modal" id="modal-buy-btn" href="#" target="_blank">Purchase — $79</a>
         <div class="modal-contact-note">Questions? <a href="contact.html">Get in touch</a></div>
       </div>
     </div>
@@ -411,12 +424,12 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   var tdata = {
-    "contemporary-coastal":{name:"Contemporary Coastal",keywords:"Relaxed / Refined / Natural",price:"$59",stripe:"https://buy.stripe.com/REPLACE_contemporary_coastal",desc:"Blends relaxed seaside character with clean, modern design. Soft planting palettes, natural textures and layered greenery.",features:["moodboard","plant plan","3D render"],bg:"#8fa89a"},
-    "tropical":{name:"Tropical Resort",keywords:"Lush / Vibrant / Resort-Inspired",price:"$59",stripe:"https://buy.stripe.com/REPLACE_tropical_resort",desc:"A lush, resort-inspired retreat with layered foliage, bold textures and vibrant greenery.",features:["moodboard","plant plan","3D render"],bg:"#6b8f6b"},
-    "modern-australian":{name:"Modern Australian",keywords:"Textural / Contemporary / Resilient",price:"$59",stripe:"https://buy.stripe.com/REPLACE_modern_australian",desc:"Native and complementary plantings, clean lines and natural materials. Functional, low-maintenance and distinctly Australian.",features:["moodboard","plant plan","3D render"],bg:"#a89878"},
-    "palm-springs":{name:"Palm Springs",keywords:"Sculptural / Desert-Inspired / Bold",price:"$59",stripe:"https://buy.stripe.com/REPLACE_palm_springs",desc:"Desert luxury with sculptural plants, clean lines and a curated palette of textures.",features:["moodboard","plant plan","3D render"],bg:"#c4a882"},
-    "mediterranean":{name:"Mediterranean Charm",keywords:"Relaxed / Timeless / Organic",price:"$59",stripe:"https://buy.stripe.com/REPLACE_mediterranean_charm",desc:"Timeless elegance with relaxed outdoor living. Drought-tolerant species, natural stone and warm earthy tones.",features:["moodboard","plant plan","3D render"],bg:"#b0a882"},
-    "native-australian":{name:"Native Australian",keywords:"Native / Earthy / Sustainable",price:"$59",stripe:"https://buy.stripe.com/REPLACE_native_australian",desc:"Celebrates the beauty of Australian flora with textured foliage, seasonal colour and drought-tolerant plantings.",features:["moodboard","plant plan","3D render"],bg:"#8fa878"}
+    "contemporary-coastal":{name:"Contemporary Coastal",keywords:"Relaxed / Refined / Natural",price:"$79",stripe:"https://buy.stripe.com/REPLACE_contemporary_coastal",desc:"Blends relaxed seaside character with clean, modern design. Soft planting palettes, natural textures and layered greenery.",features:["moodboard","plant plan","3D render"],bg:"#8fa89a"},
+    "tropical":{name:"Tropical Resort",keywords:"Lush / Vibrant / Resort-Inspired",price:"$79",stripe:"https://buy.stripe.com/REPLACE_tropical_resort",desc:"A lush, resort-inspired retreat with layered foliage, bold textures and vibrant greenery.",features:["moodboard","plant plan","3D render"],bg:"#6b8f6b"},
+    "modern-australian":{name:"Modern Australian",keywords:"Textural / Contemporary / Resilient",price:"$79",stripe:"https://buy.stripe.com/REPLACE_modern_australian",desc:"Native and complementary plantings, clean lines and natural materials. Functional, low-maintenance and distinctly Australian.",features:["moodboard","plant plan","3D render"],bg:"#a89878"},
+    "palm-springs":{name:"Palm Springs",keywords:"Sculptural / Desert-Inspired / Bold",price:"$79",stripe:"https://buy.stripe.com/REPLACE_palm_springs",desc:"Desert luxury with sculptural plants, clean lines and a curated palette of textures.",features:["moodboard","plant plan","3D render"],bg:"#c4a882"},
+    "mediterranean":{name:"Mediterranean Charm",keywords:"Relaxed / Timeless / Organic",price:"$79",stripe:"https://buy.stripe.com/REPLACE_mediterranean_charm",desc:"Timeless elegance with relaxed outdoor living. Drought-tolerant species, natural stone and warm earthy tones.",features:["moodboard","plant plan","3D render"],bg:"#b0a882"},
+    "native-australian":{name:"Native Australian",keywords:"Native / Earthy / Sustainable",price:"$79",stripe:"https://buy.stripe.com/REPLACE_native_australian",desc:"Celebrates the beauty of Australian flora with textured foliage, seasonal colour and drought-tolerant plantings.",features:["moodboard","plant plan","3D render"],bg:"#8fa878"}
   };
 
   window.openModal = function(id) {
@@ -448,13 +461,13 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!-- POPUP OVERLAY -->
-<div id="popup-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:9000;align-items:center;justify-content:center;padding:24px;">
+<div id="popup-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:9000;align-items:center;justify-content:center;padding:24px;">
   <div style="background:#ffffff;border-radius:6px;max-width:480px;width:100%;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.2);">
     <!-- Top dark band -->
     <div style="background:#1a1a1a;padding:32px 36px 28px;">
       <p style="font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:10px;">Limited offer</p>
       <h2 style="font-size:28px;font-weight:900;color:#ffffff;letter-spacing:-1px;line-height:1.1;margin-bottom:8px;">Get your design<br>for $59</h2>
-      <p style="font-size:14px;color:rgba(255,255,255,0.5);line-height:1.65;">Enter your email and we'll send you an exclusive discount code to use at checkout. Our templates are normally $79.</p>
+      <p style="font-size:14px;color:rgba(255,255,255,0.5);line-height:1.65;">Our templates are $79. Enter your email below and we'll give you a code to get any design for just $59.</p>
     </div>
     <!-- Form -->
     <div style="padding:28px 36px 32px;">
@@ -472,7 +485,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </form>
       <!-- Code reveal (hidden until form submitted) -->
       <div id="popup-code-reveal" style="display:none;text-align:center;padding-top:4px;">
-        <p style="font-size:14px;color:#5a5a5a;margin-bottom:16px;line-height:1.65;">Thanks! Here's your code. Use it at checkout to get any template for <strong style="color:#1a1a1a;">$59</strong>.</p>
+        <p style="font-size:14px;color:#5a5a5a;margin-bottom:16px;line-height:1.65;">Thanks! Here's your code. Use it at checkout to get any template for <strong style="color:#1a1a1a;">$79</strong>.</p>
         <div style="background:#f8f8f6;border:1.5px dashed #e4e4e0;border-radius:4px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;">
           <span id="popup-code-text" style="font-size:22px;font-weight:900;letter-spacing:0.12em;color:#1a1a1a;">GARDEN59</span>
           <button onclick="copyCode()" id="copy-btn"
