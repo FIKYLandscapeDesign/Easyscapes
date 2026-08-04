@@ -465,13 +465,13 @@ footer{background:var(--dark);padding:52px 56px 28px;}
   <div class="modal">
     <div class="modal-top">
       <div class="modal-img" id="modal-img">
-      <div class="modal-img-fade">
-        <div class="modal-img-lock">
-          <p>🔒 Full design included with purchase</p>
-          <span>Includes complete plant plan, moodboard and 3D render</span>
+        <div class="modal-img-fade">
+          <div class="modal-img-lock">
+            <p>🔒 Included with purchase</p>
+            <span>Complete plant plan, moodboard and 3D render</span>
+          </div>
         </div>
       </div>
-    </div>
       <div class="modal-body">
         <button class="modal-close" onclick="closeModal()">&#x2715;</button>
         <div class="modal-keywords" id="modal-keywords"></div>
@@ -486,13 +486,44 @@ footer{background:var(--dark);padding:52px 56px 28px;}
         </div>
         <p class="modal-desc" id="modal-desc"></p>
         <p class="modal-block-note">Designed for blocks <strong>8m–15m wide</strong>. Can usually be adapted to suit your block.</p>
-        <div style="font-size:11px;color:var(--light);line-height:1.6;margin-bottom:10px;">
-          by purchasing you agree to our <a href="terms.html" style="color:var(--dark);font-weight:600;text-decoration:underline;text-underline-offset:2px;">Terms &amp; conditions</a>. All sales are final — no refunds once files are delivered.
-        </div>
         <p style="font-size:11px;color:var(--light);line-height:1.6;margin-bottom:8px;">By purchasing you agree to our <a href="terms.html" style="color:var(--dark);font-weight:600;text-decoration:underline;text-underline-offset:2px;">terms &amp; conditions</a>. All sales are final — no refunds once files are delivered.</p>
         <a class="btn-buy-modal" id="modal-buy-btn" href="#" target="_blank">Purchase — $79</a>
         <div class="modal-contact-note">Questions? <a href="contact.html">Get in touch</a></div>
       </div>
+    </div>
+
+    <!-- Moodboard and plant plan — shown for styles that have them -->
+    <div id="modal-extras" style="display:none;border-top:1px solid var(--border);">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+
+        <!-- Moodboard — full -->
+        <div style="padding:24px;border-right:1px solid var(--border);">
+          <p style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--light);margin-bottom:12px;">Moodboard</p>
+          <div style="border-radius:4px;overflow:hidden;">
+            <img id="modal-moodboard" src="" alt="Moodboard" style="width:100%;height:auto;display:block;">
+          </div>
+        </div>
+
+        <!-- Plant plan — blurred -->
+        <div style="padding:24px;">
+          <p style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--light);margin-bottom:12px;">Plant plan — preview</p>
+          <div style="position:relative;border-radius:4px;overflow:hidden;">
+            <img id="modal-plantplan" src="" alt="Plant plan" style="width:100%;height:auto;display:block;filter:blur(6px);transform:scale(1.04);">
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.12);">
+              <div style="background:rgba(255,255,255,0.96);border-radius:3px;padding:10px 16px;text-align:center;">
+                <p style="font-size:12px;font-weight:700;color:#1a1a1a;margin-bottom:2px;">🔒 Included with purchase</p>
+                <p style="font-size:11px;color:#9a9a9a;">Species names, quantities and placement</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div style="background:var(--dark);padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <p style="font-size:13px;color:rgba(255,255,255,0.45);line-height:1.6;">Want to see this design on your home?</p>
+      <a href="visualiser.html" style="font-size:13px;font-weight:700;color:var(--white);text-decoration:none;white-space:nowrap;border-bottom:1px solid rgba(255,255,255,0.3);padding-bottom:2px;">Try the landscape visualiser &#8594;</a>
     </div>
   </div>
 </div>
