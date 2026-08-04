@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>faq — easyscapes</title>
+<title>contact — easyscapes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -290,22 +290,33 @@ footer{background:var(--dark);padding:52px 56px 28px;}
   <a href="contact.html">Contact</a>
 </div>
 <div class="page-wrap">
-<section class="faq-section" style="min-height:calc(100vh - 72px);">
+<section style="background:var(--bg);min-height:calc(100vh - 72px);">
   <div class="section-inner">
-    <span class="eyebrow">Faq</span>
-    <h2 class="big-title">Questions we get asked a lot</h2>
-    <p style="font-size:15px;color:var(--mid);">Can't find what you're looking for? <a href="contact.html" style="color:var(--dark);font-weight:600;text-decoration:underline;text-underline-offset:2px;">Get in touch.</a></p>
-    <div class="faq-list">
-      <div class="faq-item"><div class="faq-q"><h4>What is included in each template?</h4><div class="faq-toggle">+</div></div><div class="faq-a">Every template includes a moodboard, plant plan with species recommendations, and a 3D render of the finished design. All delivered as PDF files instantly after purchase.</div></div>
-      <div class="faq-item"><div class="faq-q"><h4>Will the template fit my block?</h4><div class="faq-toggle">+</div></div><div class="faq-a">Our templates are designed to work for blocks ranging between 8m and 15m wide. If your block falls outside this range, get in touch and we can advise.</div></div>
-      <div class="faq-item"><div class="faq-q"><h4>How do i pay?</h4><div class="faq-toggle">+</div></div><div class="faq-a">We use Stripe for secure payment processing. When you click purchase, you'll be taken to a secure Stripe checkout page to enter your payment details. We accept all major credit and debit cards. You'll never enter card details on the easyscapes site directly.</div></div>
-      <div class="faq-item"><div class="faq-q"><h4>How do i get my design after i pay?</h4><div class="faq-toggle">+</div></div><div class="faq-a">After purchase you'll receive an email with a download link to your full design package as high-quality PDF files, ready to use straight away.</div></div>
-      <div class="faq-item"><div class="faq-q"><h4>Can i change the plants?</h4><div class="faq-toggle">+</div></div><div class="faq-a">Yes. The templates are guides, not rigid plans. Plant selections, materials and layouts can all be adjusted to suit your site, soil type, climate and budget.</div></div>
-      <div class="faq-item"><div class="faq-q"><h4>Can i give the plan to a landscaper?</h4><div class="faq-toggle">+</div></div><div class="faq-a">Absolutely. The templates are designed to hand directly to any landscaper. The plant plan and 3D render give them everything they need to quote and build the job.</div></div>
-      <div class="faq-item"><div class="faq-q"><h4>Can i do the work myself?</h4><div class="faq-toggle">+</div></div><div class="faq-a">Yes. Each template is designed with DIY in mind. Clear planting layouts and visual guidance make it easy to tackle yourself at whatever pace suits your budget.</div></div>
-      <div class="faq-item"><div class="faq-q"><h4>What does the maintenance score mean?</h4><div class="faq-toggle">+</div></div><div class="faq-a">Low means minimal pruning and watering — great for busy households. Medium means occasional seasonal care.</div></div>
-      <div class="faq-item"><div class="faq-q"><h4>What is the landscape visualiser?</h4><div class="faq-toggle">+</div></div><div class="faq-a">The landscape visualiser lets you optionally upload a photo of your home and see how your chosen design could look on your actual property. It is currently in development and coming soon.</div></div>
-      <div class="faq-item"><div class="faq-q"><h4>Do you do backyard designs?</h4><div class="faq-toggle">+</div></div><div class="faq-a">We're currently focused on front yard designs. If you're interested in a combined front and backyard package, email us at hello@easyscapes.com and we'd love to discuss it.</div></div>
+    <span class="eyebrow">Contact</span>
+    <h2 class="big-title">Get in touch</h2>
+    <div class="two-col">
+      <div>
+        <div class="body-text">
+          <p>Have a question about a style, your block size, or the purchase process? We're here to help.</p>
+          <p>Use the form and we'll get back to you within one business day.</p>
+          <p>Interested in a front and backyard package? Drop us a message and we'll talk through the options.</p>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-item"><label>Email</label><a href="mailto:hello@easyscapes.com">hello@easyscapes.com</a></div>
+          <div class="contact-item"><label>Based in</label><span>Adelaide, South Australia</span></div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <p style="display:none"><input name="bot-field"></p>
+          <div class="form-group"><label>Your name</label><input type="text" name="name" placeholder="Jane Smith" required></div>
+          <div class="form-group"><label>Email address</label><input type="email" name="email" placeholder="jane@email.com" required></div>
+          <div class="form-group"><label>Subject</label><select name="subject"><option>question about a style</option><option>front and backyard package enquiry</option><option>block size query</option><option>purchase help</option><option>something else</option></select></div>
+          <div class="form-group"><label>Message</label><textarea name="message" placeholder="Tell us what you need..." required></textarea></div>
+          <button type="submit" class="form-submit">Send message</button>
+        </form>
+      </div>
     </div>
   </div>
 </section>
