@@ -518,20 +518,8 @@ footer{background:var(--dark);padding:52px 56px 28px;}
             </div>
           </div>
 
-          <!-- Driveway type -->
-          <div style="margin-bottom:10px;">
-            <label style="font-size:11px;font-weight:600;color:#5a5a5a;display:block;margin-bottom:6px;">Driveway type</label>
-            <div style="display:flex;gap:8px;flex-wrap:wrap;">
-              <button type="button" class="drive-opt" onclick="selectDrive(this,'single')"
-                style="padding:7px 14px;border:1.5px solid #e4e4e0;border-radius:3px;background:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:#5a5a5a;cursor:pointer;">
-                Single
-              </button>
-              <button type="button" class="drive-opt" onclick="selectDrive(this,'double')"
-                style="padding:7px 14px;border:1.5px solid #e4e4e0;border-radius:3px;background:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:#5a5a5a;cursor:pointer;">
-                Double
-              </button>
-            </div>
-          </div>
+          <!-- Driveway type — double only -->
+          <input type="hidden" id="block-driveway-type" value="double">
 
           <!-- Driveway side -->
           <div>
@@ -541,10 +529,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
                 style="padding:7px 14px;border:1.5px solid #e4e4e0;border-radius:3px;background:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:#5a5a5a;cursor:pointer;">
                 Left
               </button>
-              <button type="button" class="side-opt" onclick="selectSide(this,'centre')"
-                style="padding:7px 14px;border:1.5px solid #e4e4e0;border-radius:3px;background:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:#5a5a5a;cursor:pointer;">
-                Centre
-              </button>
+
               <button type="button" class="side-opt" onclick="selectSide(this,'right')"
                 style="padding:7px 14px;border:1.5px solid #e4e4e0;border-radius:3px;background:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:#5a5a5a;cursor:pointer;">
                 Right
@@ -552,7 +537,6 @@ footer{background:var(--dark);padding:52px 56px 28px;}
             </div>
           </div>
 
-          <input type="hidden" id="block-driveway-type" value="">
           <input type="hidden" id="block-driveway-side" value="">
         </div>
 
