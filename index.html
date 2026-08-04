@@ -45,7 +45,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--bg);displa
 
 /* STYLE CARD GRID */
 .styles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;background:var(--border);}
-.style-card{position:relative;aspect-ratio:3/4;overflow:hidden;cursor:pointer;}
+.style-card{position:relative;aspect-ratio:16/9;overflow:hidden;cursor:pointer;}
 .style-card-bg{width:100%;height:100%;transition:transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);position:relative;display:flex;align-items:center;justify-content:center;}
 .style-card:hover .style-card-bg{transform:scale(1.05);}
 .style-card-bg img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;}
@@ -120,7 +120,7 @@ section{padding:88px 56px;}
 .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;}
 .tcard{background:var(--white);border-radius:4px;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;cursor:pointer;border:1px solid var(--border);}
 .tcard:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,0.07);}
-.tcard-img{width:100%;aspect-ratio:4/3;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.tcard-img{width:100%;aspect-ratio:16/9;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
 .tcard-img-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:11px;color:rgba(255,255,255,0.5);letter-spacing:0.1em;text-transform:uppercase;font-weight:500;flex-direction:column;gap:6px;transition:transform 0.4s;}
 .tcard:hover .tcard-img-inner{transform:scale(1.03);}
 .tcard-img-inner img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;}
@@ -303,7 +303,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 <div class="styles-grid">
 <div class="style-card" onclick="window.location='styles.html'">
   <div class="style-card-bg" style="background:#8fa89a;">
-    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/contemporary-coastal-hero.png" alt="Contemporary Coastal" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/contemporary-coastal-hero.png" alt="Contemporary Coastal" style="width:100%;height:100%;object-fit:cover;object-position:center center;position:absolute;inset:0;">
   </div>
   <div class="style-card-overlay">
     <h3>Contemporary coastal</h3>
@@ -312,7 +312,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 </div>
 <div class="style-card" onclick="window.location='styles.html'">
   <div class="style-card-bg" style="background:#6b8f6b;">
-    <!-- TO ADD IMAGE: replace the div above with <img src="tropical.jpg" alt="Tropical Resort" style="width:100%;height:100%;object-fit:cover;"> -->
+    <!-- TO ADD IMAGE: replace the div above with <img src="tropical.jpg" alt="Tropical Resort" style="width:100%;height:100%;object-fit:cover;object-position:center center;"> -->
     <div class="style-card-bg-placeholder">
       <span>Tropical Resort</span>
     </div>
@@ -324,7 +324,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 </div>
 <div class="style-card" onclick="window.location='styles.html'">
   <div class="style-card-bg" style="background:#a89878;">
-    <!-- TO ADD IMAGE: replace the div above with <img src="modern-australian.jpg" alt="Modern Australian" style="width:100%;height:100%;object-fit:cover;"> -->
+    <!-- TO ADD IMAGE: replace the div above with <img src="modern-australian.jpg" alt="Modern Australian" style="width:100%;height:100%;object-fit:cover;object-position:center center;"> -->
     <div class="style-card-bg-placeholder">
       <span>Modern Australian</span>
     </div>
@@ -336,7 +336,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 </div>
 <div class="style-card" onclick="window.location='styles.html'">
   <div class="style-card-bg" style="background:#c4a882;">
-    <!-- TO ADD IMAGE: replace the div above with <img src="palm-springs.jpg" alt="Palm Springs" style="width:100%;height:100%;object-fit:cover;"> -->
+    <!-- TO ADD IMAGE: replace the div above with <img src="palm-springs.jpg" alt="Palm Springs" style="width:100%;height:100%;object-fit:cover;object-position:center center;"> -->
     <div class="style-card-bg-placeholder">
       <span>Palm Springs</span>
     </div>
@@ -348,7 +348,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 </div>
 <div class="style-card" onclick="window.location='styles.html'">
   <div class="style-card-bg" style="background:#b0a882;">
-    <!-- TO ADD IMAGE: replace the div above with <img src="mediterranean.jpg" alt="Mediterranean Charm" style="width:100%;height:100%;object-fit:cover;"> -->
+    <!-- TO ADD IMAGE: replace the div above with <img src="mediterranean.jpg" alt="Mediterranean Charm" style="width:100%;height:100%;object-fit:cover;object-position:center center;"> -->
     <div class="style-card-bg-placeholder">
       <span>Mediterranean Charm</span>
     </div>
@@ -360,7 +360,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 </div>
 <div class="style-card" onclick="window.location='styles.html'">
   <div class="style-card-bg" style="background:#8fa878;">
-    <!-- TO ADD IMAGE: replace the div above with <img src="native-australian.jpg" alt="Native Australian" style="width:100%;height:100%;object-fit:cover;"> -->
+    <!-- TO ADD IMAGE: replace the div above with <img src="native-australian.jpg" alt="Native Australian" style="width:100%;height:100%;object-fit:cover;object-position:center center;"> -->
     <div class="style-card-bg-placeholder">
       <span>Native Australian</span>
     </div>
