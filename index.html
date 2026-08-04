@@ -152,9 +152,9 @@ section{padding:88px 56px;}
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:2000;overflow-y:auto;padding:80px 24px 40px;}
 .modal-overlay.open{display:block;}
 .modal{background:var(--white);border-radius:6px;max-width:860px;margin:0 auto;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.18);}
-.modal-top{display:grid;grid-template-columns:1fr 1fr;}
-.modal-img{min-height:380px;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase;flex-direction:column;gap:8px;}
-.modal-img img{width:100%;height:100%;object-fit:cover;}
+.modal-top{display:grid;grid-template-columns:1fr 1fr;align-items:start;}
+.modal-img{height:260px;overflow:hidden;position:relative;background:#e0dcd4;border-radius:4px;margin:20px 0 0 20px;}
+.modal-img img{width:100%;height:100%;object-fit:cover;filter:blur(8px);transform:scale(1.06);}
 .modal-body{padding:36px 32px;display:flex;flex-direction:column;}
 .modal-close{background:none;border:none;font-size:20px;cursor:pointer;color:var(--light);align-self:flex-end;line-height:1;transition:colour 0.2s;margin-bottom:12px;}
 .modal-close:hover{color:var(--dark);}
@@ -305,7 +305,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 <div class="styles-grid">
 <div class="style-card" onclick="window.location='styles.html'">
   <div class="style-card-bg" style="background:#8fa89a;">
-    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/contemporary-coastal-hero.png" alt="Contemporary Coastal" style="width:100%;height:160%;object-fit:cover;object-position:top center;position:absolute;top:0;left:0;right:0;">
+    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/contemporary-coastal-hero.png" alt="Contemporary Coastal" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);">
   </div>
   <div class="style-card-overlay">
     <h3>Contemporary coastal</h3>
@@ -314,7 +314,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 </div>
 <div class="style-card" onclick="window.location='styles.html'">
   <div class="style-card-bg" style="background:#6b8f6b;">
-    <!-- TO ADD IMAGE: replace the div above with <img src="tropical.jpg" alt="Tropical Resort" style="width:100%;height:160%;object-fit:cover;object-position:top center;position:absolute;top:0;left:0;right:0;"> -->
+    <!-- TO ADD IMAGE: replace the div above with <img src="tropical.jpg" alt="Tropical Resort" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);"> -->
     <div class="style-card-bg-placeholder">
       <span>Tropical Resort</span>
     </div>
@@ -326,7 +326,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 </div>
 <div class="style-card" onclick="window.location='styles.html'">
   <div class="style-card-bg" style="background:#a89878;">
-    <!-- TO ADD IMAGE: replace the div above with <img src="modern-australian.jpg" alt="Modern Australian" style="width:100%;height:160%;object-fit:cover;object-position:top center;position:absolute;top:0;left:0;right:0;"> -->
+    <!-- TO ADD IMAGE: replace the div above with <img src="modern-australian.jpg" alt="Modern Australian" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);"> -->
     <div class="style-card-bg-placeholder">
       <span>Modern Australian</span>
     </div>
@@ -338,7 +338,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 </div>
 <div class="style-card" onclick="window.location='styles.html'">
   <div class="style-card-bg" style="background:#c4a882;">
-    <!-- TO ADD IMAGE: replace the div above with <img src="palm-springs.jpg" alt="Palm Springs" style="width:100%;height:160%;object-fit:cover;object-position:top center;position:absolute;top:0;left:0;right:0;"> -->
+    <!-- TO ADD IMAGE: replace the div above with <img src="palm-springs.jpg" alt="Palm Springs" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);"> -->
     <div class="style-card-bg-placeholder">
       <span>Palm Springs</span>
     </div>
@@ -350,7 +350,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 </div>
 <div class="style-card" onclick="window.location='styles.html'">
   <div class="style-card-bg" style="background:#b0a882;">
-    <!-- TO ADD IMAGE: replace the div above with <img src="mediterranean.jpg" alt="Mediterranean Charm" style="width:100%;height:160%;object-fit:cover;object-position:top center;position:absolute;top:0;left:0;right:0;"> -->
+    <!-- TO ADD IMAGE: replace the div above with <img src="mediterranean.jpg" alt="Mediterranean Charm" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);"> -->
     <div class="style-card-bg-placeholder">
       <span>Mediterranean Charm</span>
     </div>
@@ -362,7 +362,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 </div>
 <div class="style-card" onclick="window.location='styles.html'">
   <div class="style-card-bg" style="background:#8fa878;">
-    <!-- TO ADD IMAGE: replace the div above with <img src="native-australian.jpg" alt="Native Australian" style="width:100%;height:160%;object-fit:cover;object-position:top center;position:absolute;top:0;left:0;right:0;"> -->
+    <!-- TO ADD IMAGE: replace the div above with <img src="native-australian.jpg" alt="Native Australian" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);"> -->
     <div class="style-card-bg-placeholder">
       <span>Native Australian</span>
     </div>
@@ -590,7 +590,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!-- POPUP OVERLAY -->
-<div id="popup-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:9000;align-items:center;justify-content:center;padding:24px;">
+<div id="popup-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:9000;align-items:center;justify-content:center;padding:24px;">
   <div style="background:#ffffff;border-radius:6px;max-width:480px;width:100%;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.2);">
     <!-- Top dark band -->
     <div style="background:#1a1a1a;padding:32px 36px 28px;">
