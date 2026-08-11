@@ -667,22 +667,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.style.overflow = '';
   };
 
-  window.copyModalCode = function() {
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText('GARDEN59');
-    } else {
-      var el = document.createElement('textarea');
-      el.value = 'GARDEN59';
-      document.body.appendChild(el);
-      el.select();
-      document.execCommand('copy');
-      document.body.removeChild(el);
-    }
-    var btn = event.target;
-    btn.textContent = 'Copied!';
-    setTimeout(function() { btn.textContent = 'Copy'; }, 2000);
-  };
-
   // Block size validation
   window.checkBlockSize = function() {
     var width = parseFloat(document.getElementById('block-width').value);
