@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>styles — easyscapes</title>
+<title>styles, easyscapes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -279,7 +279,6 @@ footer{background:var(--dark);padding:52px 56px 28px;}
     <li><a href="about.html">About</a></li>
     <li><a href="styles.html">Styles</a></li>
     <li><a href="how.html">How it works</a></li>
-    <li><a href="visualiser.html">Visualiser</a></li>
     <li><a href="faq.html">Faq</a></li>
     <li><a href="contact.html" class="nav-cta">Contact</a></li>
   </ul>
@@ -289,7 +288,6 @@ footer{background:var(--dark);padding:52px 56px 28px;}
   <a href="about.html">About</a>
   <a href="styles.html">Styles</a>
   <a href="how.html">How it works</a>
-  <a href="visualiser.html">Visualiser</a>
   <a href="faq.html">Faq</a>
   <a href="contact.html">Contact</a>
 </div>
@@ -297,8 +295,9 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 <section class="styles-section" style="min-height:calc(100vh - 72px);">
   <div class="section-inner">
     <span class="eyebrow">Landscape styles</span>
-    <h2 class="big-title">Choose your style</h2>
-    <p style="font-size:15px;color:var(--mid);line-height:1.8;max-width:520px;margin-bottom:36px;">Six professionally designed front yard landscape styles. All $79. Designed for blocks ranging between 8m and 15m wide.</p>
+    <h2 class="big-title">Find your perfect style. See it come to life.</h2>
+    <p style="font-size:15px;color:var(--mid);line-height:1.8;max-width:520px;margin-bottom:8px;">Six professionally designed landscape styles. One simple price, $79. Designed for front yards between 8m and 15m wide.</p>
+    <p style="font-size:14px;color:var(--mid);line-height:1.8;max-width:520px;margin-bottom:36px;">Working with a different block size? <a href="mailto:hello@easyscapes.com.au" style="color:var(--dark);font-weight:600;text-decoration:underline;text-underline-offset:2px;">Get in touch</a> and we can create something bespoke for you.</p>
 
     <div class="inc-bar">
       <span class="inc-label">Every template includes</span>
@@ -341,7 +340,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
     <div class="tcard-keywords">Lush / vibrant / resort-inspired</div>
     <div class="tcard-name">Tropical resort</div>
     <span class="tcard-price">$79</span>
-    <p class="tcard-desc">A lush, resort-inspired retreat with layered foliage, bold textures and vibrant greenery — tranquillity, privacy and year-round connection to nature.</p>
+    <p class="tcard-desc">A lush, resort-inspired retreat with layered foliage, bold textures and vibrant greenery, tranquillity, privacy and year-round connection to nature.</p>
     <div class="tcard-maint"><div class="mdots"><span class="mdot on"></span><span class="mdot on"></span><span class="mdot"></span></div>Medium maintenance</div>
   </div>
 </div>
@@ -412,7 +411,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
         <p style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:6px;">Interested in a front and backyard package?</p>
         <p style="font-size:14px;color:var(--mid);line-height:1.7;max-width:480px;">We're currently focused on front yard designs, but if you'd like to discuss a combined front and backyard package, we'd love to hear from you.</p>
       </div>
-      <a href="mailto:hello@easyscapes.com" class="btn btn-dark">Get in touch</a>
+      <a href="mailto:hello@easyscapes.com.au" class="btn btn-dark">Get in touch</a>
     </div>
 
   </div>
@@ -451,7 +450,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
       </ul></div>
       <div class="footer-col"><h4>Contact</h4><ul>
         <li><a href="contact.html">Get in touch</a></li>
-        <li><a href="mailto:hello@easyscapes.com">Hello@easyscapes.com</a></li>
+        <li><a href="mailto:hello@easyscapes.com.au">Hello@easyscapes.com</a></li>
         <li><a href="faq.html">Faq</a></li>
       </ul></div>
     </div>
@@ -478,7 +477,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
         <div class="modal-name" id="modal-name"></div>
         <div class="modal-price-row">
           <div class="modal-price" id="modal-price"></div>
-          <div class="modal-price-note">Front yard · personalised to your block</div>
+          <div class="modal-price-note">Front yard · delivered to your inbox</div>
         </div>
         <div class="modal-includes">
           <div class="modal-includes-label">What's included</div>
@@ -508,7 +507,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
             <div>
               <label style="font-size:11px;font-weight:600;color:#5a5a5a;display:block;margin-bottom:4px;">Block width (metres)</label>
-              <input type="number" id="block-width" placeholder="e.g. 12" min="8" max="15" step="0.5"
+              <input type="number" id="block-width" placeholder="e.g. 12 (8m to 15m)" min="8" max="15" step="0.5" oninput="checkBlockSize()"
                 style="width:100%;padding:9px 11px;border:1.5px solid #e4e4e0;border-radius:3px;font-family:'Inter',sans-serif;font-size:13px;color:#1a1a1a;background:#fff;outline:none;">
             </div>
             <div>
@@ -517,8 +516,12 @@ footer{background:var(--dark);padding:52px 56px 28px;}
                 style="width:100%;padding:9px 11px;border:1.5px solid #e4e4e0;border-radius:3px;font-family:'Inter',sans-serif;font-size:13px;color:#1a1a1a;background:#fff;outline:none;">
             </div>
           </div>
+          <div id="block-size-warning" style="display:none;background:#fff3cd;border:1px solid #ffc107;border-radius:3px;padding:10px 14px;margin-top:8px;">
+            <p style="font-size:12px;color:#856404;font-weight:600;margin-bottom:2px;">Your block may be outside our standard range.</p>
+            <p style="font-size:11px;color:#856404;">Our templates are designed for blocks 8m to 15m wide. <a href="contact.html" style="color:#856404;font-weight:700;text-decoration:underline;">Contact us</a> for a bespoke design.</p>
+          </div>
 
-          <!-- Driveway type — double only -->
+          <!-- Driveway type, double only -->
           <input type="hidden" id="block-driveway-type" value="double">
 
           <!-- Driveway side -->
@@ -540,10 +543,20 @@ footer{background:var(--dark);padding:52px 56px 28px;}
           <input type="hidden" id="block-driveway-side" value="">
         </div>
 
+        <!-- Runway visualiser upload — optional -->
+        <div style="background:#f8f8f6;border:1px solid #e4e4e0;border-radius:4px;padding:16px 18px;margin-bottom:14px;">
+          <p style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#9a9a9a;margin-bottom:4px;">Personalised home render <span style="background:#2d4a2d;color:#fff;font-size:9px;padding:2px 7px;border-radius:10px;letter-spacing:0.06em;margin-left:6px;">Optional</span></p>
+          <p style="font-size:12px;color:#5a5a5a;line-height:1.6;margin-bottom:12px;">Upload a photo of your home's frontage and we'll include a personalised AI render showing your chosen design on your own home, delivered with your design package.</p>
+          <label style="font-size:11px;font-weight:600;color:#5a5a5a;display:block;margin-bottom:6px;">Upload a photo of your home's frontage</label>
+          <input type="file" id="block-photo" name="photo" accept="image/*"
+            style="width:100%;padding:9px 11px;border:1.5px solid #e4e4e0;border-radius:3px;font-family:'Inter',sans-serif;font-size:13px;color:#5a5a5a;background:#fff;cursor:pointer;">
+          <p style="font-size:11px;color:#9a9a9a;margin-top:6px;">JPG or PNG. Your photo is used only to generate your personalised visualisation and is not stored.</p>
+        </div>
+
         <!-- Discount box -->
         <div id="modal-discount-box" style="background:#f8f8f6;border:1.5px dashed #e4e4e0;border-radius:4px;padding:14px 16px;margin-bottom:12px;">
           <div id="modal-discount-form">
-            <p style="font-size:12px;font-weight:700;color:#1a1a1a;margin-bottom:4px;">Get this for $59 — save $20</p>
+            <p style="font-size:12px;font-weight:700;color:#1a1a1a;margin-bottom:4px;">Get this for $59, save $20</p>
             <p style="font-size:11px;color:#9a9a9a;margin-bottom:10px;">Enter your email above and click "Get code" to save $20.</p>
           </div>
           <div id="modal-discount-code" style="display:none;">
@@ -559,17 +572,17 @@ footer{background:var(--dark);padding:52px 56px 28px;}
           </div>
         </div>
 
-        <p style="font-size:11px;color:var(--light);line-height:1.6;margin-bottom:8px;">By purchasing you agree to our <a href="terms.html" style="color:var(--dark);font-weight:600;text-decoration:underline;text-underline-offset:2px;">terms &amp; conditions</a>. All sales are final — no refunds once files are delivered.</p>
-        <button class="btn-buy-modal" id="modal-buy-btn" onclick="submitAndPurchase()">Purchase — $79</button>
+        <p style="font-size:11px;color:var(--light);line-height:1.6;margin-bottom:8px;">By purchasing you agree to our <a href="terms.html" style="color:var(--dark);font-weight:600;text-decoration:underline;text-underline-offset:2px;">terms &amp; conditions</a>. All sales are final, no refunds once files are delivered.</p>
+        <button class="btn-buy-modal" id="modal-buy-btn" onclick="submitAndPurchase()">Purchase, $79</button>
         <div class="modal-contact-note">Questions? <a href="contact.html">Get in touch</a></div>
       </div>
     </div>
 
-    <!-- Moodboard and plant plan — shown for styles that have them -->
+    <!-- Moodboard and plant plan, shown for styles that have them -->
     <div id="modal-extras" style="display:none;border-top:1px solid var(--border);">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
 
-        <!-- Moodboard — full -->
+        <!-- Moodboard, full -->
         <div style="padding:24px;border-right:1px solid var(--border);">
           <p style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--light);margin-bottom:12px;">Moodboard</p>
           <div style="border-radius:4px;overflow:hidden;">
@@ -577,9 +590,9 @@ footer{background:var(--dark);padding:52px 56px 28px;}
           </div>
         </div>
 
-        <!-- Plant plan — blurred -->
+        <!-- Plant plan, blurred -->
         <div style="padding:24px;">
-          <p style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--light);margin-bottom:12px;">Plant plan — preview</p>
+          <p style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--light);margin-bottom:12px;">Plant plan, preview</p>
           <div style="border-radius:4px;overflow:hidden;">
             <img id="modal-plantplan" src="" alt="Plant plan" style="width:100%;height:auto;display:block;">
           </div>
@@ -587,11 +600,6 @@ footer{background:var(--dark);padding:52px 56px 28px;}
         </div>
 
       </div>
-    </div>
-
-    <div style="background:var(--dark);padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
-      <p style="font-size:13px;color:rgba(255,255,255,0.45);line-height:1.6;">Want to see this design on your home?</p>
-      <a href="visualiser.html" style="font-size:13px;font-weight:700;color:var(--white);text-decoration:none;white-space:nowrap;border-bottom:1px solid rgba(255,255,255,0.3);padding-bottom:2px;">Try the landscape visualiser &#8594;</a>
     </div>
   </div>
 </div>
@@ -688,7 +696,7 @@ document.addEventListener('DOMContentLoaded', function() {
       return v ? v[2] : null;
     }
     if (getCookie('es_popup_seen')) {
-      // Already signed up — show code directly
+      // Already signed up, show code directly
       document.getElementById('modal-discount-form').style.display = 'none';
       document.getElementById('modal-discount-code').style.display = 'block';
     } else {
@@ -734,6 +742,19 @@ document.addEventListener('DOMContentLoaded', function() {
     var btn = event.target;
     btn.textContent = 'Copied!';
     setTimeout(function() { btn.textContent = 'Copy'; }, 2000);
+  };
+
+  // Block size validation
+  window.checkBlockSize = function() {
+    var width = parseFloat(document.getElementById('block-width').value);
+    var warning = document.getElementById('block-size-warning');
+    if (warning) {
+      if (width && (width < 8 || width > 15)) {
+        warning.style.display = 'block';
+      } else {
+        warning.style.display = 'none';
+      }
+    }
   };
 
   // Driveway selection buttons
@@ -791,6 +812,15 @@ document.addEventListener('DOMContentLoaded', function() {
     data.append('depth', depth + 'm');
     data.append('driveway-type', driveType);
     data.append('driveway-side', driveSide);
+
+    // Include photo if uploaded
+    var photoInput = document.getElementById('block-photo');
+    if (photoInput && photoInput.files && photoInput.files[0]) {
+      data.append('has-photo', 'yes');
+      data.append('photo-name', photoInput.files[0].name);
+    } else {
+      data.append('has-photo', 'no');
+    }
 
     fetch('/', {
       method: 'POST',
@@ -895,7 +925,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.target === this) closePopup();
   });
 
-  // Form submit — show code instead of navigating away
+  // Form submit, show code instead of navigating away
   var form = document.getElementById('popup-form');
   if (form) {
     form.addEventListener('submit', function(e) {
