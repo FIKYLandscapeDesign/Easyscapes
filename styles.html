@@ -552,7 +552,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
           <p style="font-size:11px;color:#9a9a9a;margin-top:6px;">JPG or PNG. Your photo is used only to generate your personalised visualisation and is not stored.</p>
         </div>
         <p style="font-size:11px;color:var(--light);line-height:1.6;margin-bottom:8px;">By purchasing you agree to our <a href="terms.html" style="color:var(--dark);font-weight:600;text-decoration:underline;text-underline-offset:2px;">terms &amp; conditions</a>. All sales are final, no refunds once files are delivered.</p>
-        <button class="btn-buy-modal" id="modal-buy-btn" onclick="submitAndPurchase()">Purchase, $79</button>
+        <button class="btn-buy-modal" id="modal-buy-btn" onclick="submitAndPurchase()">Purchase — $79</button>
         <div class="modal-contact-note">Questions? <a href="contact.html">Get in touch</a></div>
       </div>
     </div>
@@ -727,21 +727,33 @@ document.addEventListener('DOMContentLoaded', function() {
     var email = document.getElementById('block-email').value.trim();
     var width = document.getElementById('block-width').value.trim();
     var depth = document.getElementById('block-depth').value.trim();
-    var driveType = document.getElementById('block-driveway-type').value;
     var driveSide = document.getElementById('block-driveway-side').value;
     var style = document.getElementById('modal-name').textContent;
+    var stripeUrl = document.getElementById('modal-buy-btn').getAttribute('data-stripe');
 
-    // Basic validation
-    if (!name || !email || !width || !depth || !driveSide) {
-      alert('Please fill in all fields before purchasing.');
+    // Validate required fields
+    if (!name || !email) {
+      alert('Please enter your name and email address.');
       return;
     }
     if (!email.includes('@')) {
       alert('Please enter a valid email address.');
       return;
     }
+    if (!width || !depth) {
+      alert('Please enter your block dimensions.');
+      return;
+    }
+    if (!driveSide) {
+      alert('Please select your driveway position.');
+      return;
+    }
+    if (!stripeUrl || stripeUrl === '#') {
+      alert('Payment link not found. Please contact us at hello@easyscapes.com.au');
+      return;
+    }
 
-    // Submit to Netlify Forms
+    // Submit block details to Netlify in background
     var data = new URLSearchParams();
     data.append('form-name', 'block-details');
     data.append('name', name);
@@ -749,10 +761,8 @@ document.addEventListener('DOMContentLoaded', function() {
     data.append('style', style);
     data.append('width', width + 'm');
     data.append('depth', depth + 'm');
-    data.append('driveway-type', driveType);
+    data.append('driveway-type', 'double');
     data.append('driveway-side', driveSide);
-
-    // Include photo if uploaded
     var photoInput = document.getElementById('block-photo');
     if (photoInput && photoInput.files && photoInput.files[0]) {
       data.append('has-photo', 'yes');
@@ -760,20 +770,14 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       data.append('has-photo', 'no');
     }
-
-    var stripeUrl = document.getElementById('modal-buy-btn').getAttribute('data-stripe');
-
-    // Submit form data to Netlify in background
     fetch('/', {
       method: 'POST',
       headers: {'Content-Type': 'application/x-www-form-urlencoded'},
       body: data.toString()
     }).catch(function() {});
 
-    // Redirect to Stripe immediately
-    if (stripeUrl && stripeUrl !== '#') {
-      window.location.href = stripeUrl;
-    }
+    // Go to Stripe
+    window.location.href = stripeUrl;
   };
 
   var ov = document.getElementById('modal-overlay');
