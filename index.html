@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>easyscapes, landscape design made simple, easyscapes</title>
+<title>styles, easyscapes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -291,142 +291,136 @@ footer{background:var(--dark);padding:52px 56px 28px;}
   <a href="contact.html">Contact</a>
 </div>
 <div class="page-wrap">
-<div class="hero">
-  <h1 class="hero-logo">easyscapes<sup>™</sup></h1>
-  <p class="hero-tagline"><strong>easyscapes</strong> makes great landscape design accessible to everyone.</p>
-  <p class="hero-sub">Choose your preferred landscape style, fill in your block details and upload a photo of your home. We'll send you a personalised render showing your chosen design on your own property, along with your complete design package.</p>
-  <div class="hero-ctas">
-    <a class="btn btn-dark" href="styles.html">Browse styles</a>
-    
-  </div>
-</div>
-
-<div class="styles-grid">
-<div class="style-card" onclick="window.location='styles.html'">
-  <div class="style-card-bg" style="background:#8fa89a;">
-    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/contemporary-coastal-hero.png" alt="Contemporary Coastal" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);">
-  </div>
-  <div class="style-card-overlay">
-    <h3>Contemporary coastal</h3>
-    <div class="keywords">relaxed / refined / natural</div>
-  </div>
-</div>
-<div class="style-card" onclick="window.location='styles.html'">
-  <div class="style-card-bg" style="background:#6b8f6b;">
-    <!-- TO ADD IMAGE: replace the div above with <img src="tropical.jpg" alt="Tropical Resort" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);"> -->
-    <div class="style-card-bg-placeholder">
-      <span>Tropical Resort</span>
-    </div>
-  </div>
-  <div class="style-card-overlay">
-    <h3>Tropical resort</h3>
-    <div class="keywords">lush / vibrant / resort-inspired</div>
-  </div>
-</div>
-<div class="style-card" onclick="window.location='styles.html'">
-  <div class="style-card-bg" style="background:#a89878;">
-    <!-- TO ADD IMAGE: replace the div above with <img src="modern-australian.jpg" alt="Modern Australian" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);"> -->
-    <div class="style-card-bg-placeholder">
-      <span>Modern Australian</span>
-    </div>
-  </div>
-  <div class="style-card-overlay">
-    <h3>Modern Australian</h3>
-    <div class="keywords">textural / contemporary / resilient</div>
-  </div>
-</div>
-<div class="style-card" onclick="window.location='styles.html'">
-  <div class="style-card-bg" style="background:#c4a882;">
-    <!-- TO ADD IMAGE: replace the div above with <img src="palm-springs.jpg" alt="Palm Springs" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);"> -->
-    <div class="style-card-bg-placeholder">
-      <span>Palm Springs</span>
-    </div>
-  </div>
-  <div class="style-card-overlay">
-    <h3>Palm springs</h3>
-    <div class="keywords">sculptural / desert-inspired / bold</div>
-  </div>
-</div>
-<div class="style-card" onclick="window.location='styles.html'">
-  <div class="style-card-bg" style="background:#b0a882;">
-    <!-- TO ADD IMAGE: replace the div above with <img src="mediterranean.jpg" alt="Mediterranean Charm" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);"> -->
-    <div class="style-card-bg-placeholder">
-      <span>Mediterranean Charm</span>
-    </div>
-  </div>
-  <div class="style-card-overlay">
-    <h3>Mediterranean charm</h3>
-    <div class="keywords">relaxed / timeless / organic</div>
-  </div>
-</div>
-<div class="style-card" onclick="window.location='styles.html'">
-  <div class="style-card-bg" style="background:#8fa878;">
-    <!-- TO ADD IMAGE: replace the div above with <img src="native-australian.jpg" alt="Native Australian" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);"> -->
-    <div class="style-card-bg-placeholder">
-      <span>Native Australian</span>
-    </div>
-  </div>
-  <div class="style-card-overlay">
-    <h3>Native Australian</h3>
-    <div class="keywords">native / earthy / sustainable</div>
-  </div>
-</div>
-</div>
-
-<section style="background:var(--bg);">
+<section class="styles-section" style="min-height:calc(100vh - 72px);">
   <div class="section-inner">
-    <span class="eyebrow">About</span>
-    <h2 class="big-title">Simple design. Accessible to everyone.</h2>
-    <div class="two-col">
-      <div class="body-text">
-        <p><strong>easyscapes</strong> makes great landscape design accessible to everyone. We combine professional landscape expertise with beautiful, ready-to-use templates that take the guesswork out of creating your dream outdoor space.</p>
-        <p>Our templates are designed to work for blocks ranging between 8m and 15m wide, covering the vast majority of Australian front yards.</p>
-        <p class="bold-line">It's one thing to imagine your new landscape, it's another to see it come to life.</p>
-        <div style="margin-top:28px;"><a class="btn btn-dark" href="about.html">Learn more</a></div>
-      </div>
-      <div class="img-placeholder">
-        <!-- TO ADD IMAGE: <img src="about-image.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:4px;"> -->
-        [ about image ]
+    <span class="eyebrow">Landscape styles</span>
+    <h2 class="big-title">Find your perfect style. See it come to life.</h2>
+    <p style="font-size:15px;color:var(--mid);line-height:1.8;max-width:520px;margin-bottom:8px;">Six professionally designed landscape styles. One simple price, $79. Designed for front yards between 8m and 15m wide.</p>
+    <p style="font-size:14px;color:var(--mid);line-height:1.8;max-width:520px;margin-bottom:36px;">Working with a different block size? <a href="mailto:hello@easyscapes.com.au" style="color:var(--dark);font-weight:600;text-decoration:underline;text-underline-offset:2px;">Get in touch</a> and we can create something bespoke for you.</p>
+
+    <div class="inc-bar">
+      <span class="inc-label">Every template includes</span>
+      <div class="inc-items">
+        <span class="inc-item">Moodboard</span>
+        <span class="inc-item">Plant plan</span>
+        <span class="inc-item">3D render</span>
       </div>
     </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All styles</button>
+      <button class="filter-btn" data-filter="low">Low maintenance</button>
+      <button class="filter-btn" data-filter="medium">Medium maintenance</button>
+    </div>
+
+    <div class="tgrid">
+<div class="tcard" data-m="medium" onclick="openModal('contemporary-coastal')">
+  <div class="tcard-img" style="background:#8fa89a;overflow:hidden;">
+    <div class="tcard-img-inner">
+      <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/contemporary-coastal-hero.png" alt="Contemporary Coastal" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);">
+    </div>
+  </div>
+  <div class="tcard-body">
+    <div class="tcard-keywords">Relaxed / refined / natural</div>
+    <div class="tcard-name">Contemporary coastal</div>
+    <span class="tcard-price">$79</span>
+    <p class="tcard-desc">Blends relaxed seaside character with clean, modern design. Soft planting palettes, natural textures and layered greenery.</p>
+    <div class="tcard-maint"><div class="mdots"><span class="mdot on"></span><span class="mdot on"></span><span class="mdot"></span></div>Medium maintenance</div>
+  </div>
+</div>
+<div class="tcard" data-m="medium" onclick="openModal('tropical')">
+  <div class="tcard-img" style="background:#6b8f6b;">
+    <div class="tcard-img-inner">
+      <!-- TO ADD IMAGE: <img src="tropical.jpg" alt="Tropical Resort"> -->
+      <span style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);font-weight:600;">Tropical Resort</span>
+    </div>
+  </div>
+  <div class="tcard-body">
+    <div class="tcard-keywords">Lush / vibrant / resort-inspired</div>
+    <div class="tcard-name">Tropical resort</div>
+    <span class="tcard-price">$79</span>
+    <p class="tcard-desc">A lush, resort-inspired retreat with layered foliage, bold textures and vibrant greenery, tranquillity, privacy and year-round connection to nature.</p>
+    <div class="tcard-maint"><div class="mdots"><span class="mdot on"></span><span class="mdot on"></span><span class="mdot"></span></div>Medium maintenance</div>
+  </div>
+</div>
+<div class="tcard" data-m="low" onclick="openModal('modern-australian')">
+  <div class="tcard-img" style="background:#a89878;">
+    <div class="tcard-img-inner">
+      <!-- TO ADD IMAGE: <img src="modern-australian.jpg" alt="Modern Australian"> -->
+      <span style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);font-weight:600;">Modern Australian</span>
+    </div>
+  </div>
+  <div class="tcard-body">
+    <div class="tcard-keywords">Textural / contemporary / resilient</div>
+    <div class="tcard-name">Modern Australian</div>
+    <span class="tcard-price">$79</span>
+    <p class="tcard-desc">Native and complementary plantings, clean lines and natural materials. Functional, low-maintenance and distinctly Australian.</p>
+    <div class="tcard-maint"><div class="mdots"><span class="mdot on"></span><span class="mdot"></span><span class="mdot"></span></div>Low maintenance</div>
+  </div>
+</div>
+<div class="tcard" data-m="low" onclick="openModal('palm-springs')">
+  <div class="tcard-img" style="background:#c4a882;">
+    <div class="tcard-img-inner">
+      <!-- TO ADD IMAGE: <img src="palm-springs.jpg" alt="Palm Springs"> -->
+      <span style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);font-weight:600;">Palm Springs</span>
+    </div>
+  </div>
+  <div class="tcard-body">
+    <div class="tcard-keywords">Sculptural / desert-inspired / bold</div>
+    <div class="tcard-name">Palm springs</div>
+    <span class="tcard-price">$79</span>
+    <p class="tcard-desc">Desert luxury with sculptural plants, clean lines and a curated palette of textures. Bold geometric forms and a relaxed resort feel.</p>
+    <div class="tcard-maint"><div class="mdots"><span class="mdot on"></span><span class="mdot"></span><span class="mdot"></span></div>Low maintenance</div>
+  </div>
+</div>
+<div class="tcard" data-m="low" onclick="openModal('mediterranean')">
+  <div class="tcard-img" style="background:#b0a882;">
+    <div class="tcard-img-inner">
+      <!-- TO ADD IMAGE: <img src="mediterranean.jpg" alt="Mediterranean Charm"> -->
+      <span style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);font-weight:600;">Mediterranean Charm</span>
+    </div>
+  </div>
+  <div class="tcard-body">
+    <div class="tcard-keywords">Relaxed / timeless / organic</div>
+    <div class="tcard-name">Mediterranean charm</div>
+    <span class="tcard-price">$79</span>
+    <p class="tcard-desc">Olive trees, lavender and natural stone with warm earthy tones. Drought tolerant and full of character.</p>
+    <div class="tcard-maint"><div class="mdots"><span class="mdot on"></span><span class="mdot"></span><span class="mdot"></span></div>Low maintenance</div>
+  </div>
+</div>
+<div class="tcard" data-m="low" onclick="openModal('native-australian')">
+  <div class="tcard-img" style="background:#8fa878;">
+    <div class="tcard-img-inner">
+      <!-- TO ADD IMAGE: <img src="native-australian.jpg" alt="Native Australian"> -->
+      <span style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);font-weight:600;">Native Australian</span>
+    </div>
+  </div>
+  <div class="tcard-body">
+    <div class="tcard-keywords">Native / earthy / sustainable</div>
+    <div class="tcard-name">Native Australian</div>
+    <span class="tcard-price">$79</span>
+    <p class="tcard-desc">Indigenous flora with drought-tolerant plantings, seasonal colour and habitat for birds. Sustainable and naturally beautiful.</p>
+    <div class="tcard-maint"><div class="mdots"><span class="mdot on"></span><span class="mdot"></span><span class="mdot"></span></div>Low maintenance</div>
+  </div>
+</div>
+    </div>
+
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:4px;padding:32px 36px;margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;">
+      <div>
+        <p style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:6px;">Interested in a front and backyard package?</p>
+        <p style="font-size:14px;color:var(--mid);line-height:1.7;max-width:480px;">We're currently focused on front yard designs, but if you'd like to discuss a combined front and backyard package, we'd love to hear from you.</p>
+      </div>
+      <a href="mailto:hello@easyscapes.com.au" class="btn btn-dark">Get in touch</a>
+    </div>
+
   </div>
 </section>
-
-<section class="process-section">
-  <div class="section-inner">
-    <span class="eyebrow">How it works</span>
-    <h2 class="big-title">Creating your dream landscape has never been easier.</h2>
-    <div class="process-steps">
-      <div class="process-step">
-        <div class="process-num">01</div>
-        <div class="process-divider"></div>
-        <h4>Choose your style</h4>
-        <p>Explore six professionally designed landscape styles and find the perfect fit for your home, lifestyle and level of maintenance.</p>
-      </div>
-      <div class="process-step">
-        <div class="process-num">02</div>
-        <div class="process-divider"></div>
-        <h4>Upload a photo of your home</h4>
-        <p>This is where your vision becomes real. Upload a photo of your home's frontage and we'll create a personalised render showing your chosen design on your own property.</p>
-      </div>
-      <div class="process-step">
-        <div class="process-num">03</div>
-        <div class="process-divider"></div>
-        <h4>Purchase and get started</h4>
-        <p>Purchase securely via Stripe. Your complete <strong>easyscapes</strong> design package, including your personalised render, is delivered straight to your inbox.</p>
-      </div>
-      <div class="process-step">
-        <div class="process-num">04</div>
-        <div class="process-divider"></div>
-        <h4>Bring it to life, your way</h4>
-        <p>Hand your plan to a landscaper or take it on yourself. Complete your garden all at once or build it in stages, the choice, pace and budget are yours.</p>
-      </div>
-    </div>
-    <div style="margin-top:40px;"><a class="btn btn-outline" href="how.html">Learn more</a></div>
+<div class="disclaimer">
+  <div class="disclaimer-inner">
+    <span class="disc-label">Things to consider</span>
+    <p><strong>easyscapes</strong> landscape templates are provided as conceptual design guides only. They are not construction drawings, engineering plans, or site-specific technical documents. It is the responsibility of the purchaser to verify all dimensions, site conditions, council requirements, services, levels, drainage, and suitability of plant selections for their specific property. <strong>easyscapes</strong> accepts no responsibility or liability for any outcomes arising from the use of these plans.</p>
   </div>
-</section>
-
-
+</div>
 </div>
 <div style="background:var(--dark);color:rgba(255,255,255,0.55);font-size:12px;text-align:center;padding:14px 24px;line-height:1.7;">
   easyscapes templates are for personal, single-property use only. sharing, reselling or redistributing these files is strictly prohibited. <a href="terms.html" style="color:rgba(255,255,255,0.8);text-decoration:underline;text-underline-offset:2px;">Terms &amp; conditions</a>
