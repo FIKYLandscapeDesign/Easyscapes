@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>easyscapes, landscape design made simple, easyscapes</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231a1a1a'/%3E%3Ctext x='50' y='72' font-family='Arial,sans-serif' font-size='70' font-weight='700' fill='%23ffffff' text-anchor='middle'%3Ee%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -302,7 +303,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 </div>
 
 <div class="styles-grid">
-<div class="style-card" onclick="window.location='styles.html'">
+<div class="style-card" onclick="openModal('contemporary-coastal')">
   <div class="style-card-bg" style="background:#8fa89a;">
     <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/contemporary-coastal-hero.png" alt="Contemporary Coastal" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);">
   </div>
@@ -311,7 +312,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
     <div class="keywords">relaxed / refined / natural</div>
   </div>
 </div>
-<div class="style-card" onclick="window.location='styles.html'">
+<div class="style-card" onclick="openModal('tropical')">
   <div class="style-card-bg" style="background:#6b8f6b;">
     <!-- TO ADD IMAGE: replace the div above with <img src="tropical.jpg" alt="Tropical Resort" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);"> -->
     <div class="style-card-bg-placeholder">
@@ -323,7 +324,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
     <div class="keywords">lush / vibrant / resort-inspired</div>
   </div>
 </div>
-<div class="style-card" onclick="window.location='styles.html'">
+<div class="style-card" onclick="openModal('modern-australian')">
   <div class="style-card-bg" style="background:#a89878;">
     <!-- TO ADD IMAGE: replace the div above with <img src="modern-australian.jpg" alt="Modern Australian" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);"> -->
     <div class="style-card-bg-placeholder">
@@ -335,7 +336,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
     <div class="keywords">textural / contemporary / resilient</div>
   </div>
 </div>
-<div class="style-card" onclick="window.location='styles.html'">
+<div class="style-card" onclick="openModal('palm-springs')">
   <div class="style-card-bg" style="background:#c4a882;">
     <!-- TO ADD IMAGE: replace the div above with <img src="palm-springs.jpg" alt="Palm Springs" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);"> -->
     <div class="style-card-bg-placeholder">
@@ -347,7 +348,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
     <div class="keywords">sculptural / desert-inspired / bold</div>
   </div>
 </div>
-<div class="style-card" onclick="window.location='styles.html'">
+<div class="style-card" onclick="openModal('mediterranean')">
   <div class="style-card-bg" style="background:#b0a882;">
     <!-- TO ADD IMAGE: replace the div above with <img src="mediterranean.jpg" alt="Mediterranean Charm" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);"> -->
     <div class="style-card-bg-placeholder">
@@ -359,7 +360,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
     <div class="keywords">relaxed / timeless / organic</div>
   </div>
 </div>
-<div class="style-card" onclick="window.location='styles.html'">
+<div class="style-card" onclick="openModal('native-australian')">
   <div class="style-card-bg" style="background:#8fa878;">
     <!-- TO ADD IMAGE: replace the div above with <img src="native-australian.jpg" alt="Native Australian" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);"> -->
     <div class="style-card-bg-placeholder">
