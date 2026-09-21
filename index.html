@@ -154,7 +154,10 @@ section{padding:88px 56px;}
 .modal-overlay.open{display:block;}
 .modal{background:var(--white);border-radius:6px;max-width:860px;margin:0 auto;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.18);}
 .modal-top{display:grid;grid-template-columns:1fr 1fr;align-items:start;}
-.modal-img{height:260px;overflow:hidden;position:relative;background:#e0dcd4;border-radius:4px;margin:20px 0 0 20px;}
+.modal-img{height:260px;overflow:hidden;position:relative;background:#e0dcd4;border-radius:4px;margin:0;}
+.modal-left{padding:20px 0 24px 20px;display:flex;flex-direction:column;gap:14px;}
+.modal-extra-label{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--light);margin-bottom:8px;}
+.modal-extra-imgwrap{border-radius:4px;overflow:hidden;border:1px solid var(--border);}
 .modal-img img{width:100%;height:100%;object-fit:cover;filter:blur(8px);transform:scale(1.06);}
 .modal-body{padding:36px 32px;display:flex;flex-direction:column;}
 .modal-close{background:none;border:none;font-size:20px;cursor:pointer;color:var(--light);align-self:flex-end;line-height:1;transition:colour 0.2s;margin-bottom:12px;}
@@ -263,6 +266,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
   .tgrid{grid-template-columns:1fr 1fr;}
   .modal-top{grid-template-columns:1fr;}
   .modal-img{min-height:200px;}
+  .modal-left{padding:20px 20px 0 20px;}
   .footer-grid{grid-template-columns:1fr 1fr;gap:28px;}
 }
 @media(max-width:600px){
@@ -504,6 +508,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 <div class="modal-overlay" id="modal-overlay">
   <div class="modal">
     <div class="modal-top">
+      <div class="modal-left">
       <div class="modal-img" id="modal-img">
         <div class="modal-img-fade">
           <div class="modal-img-lock">
@@ -511,6 +516,17 @@ footer{background:var(--dark);padding:52px 56px 28px;}
             <span>Complete plant plan, moodboard and 3D render</span>
           </div>
         </div>
+      </div>
+      <div id="modal-extras" style="display:none;">
+        <div>
+          <p class="modal-extra-label">Moodboard</p>
+          <div class="modal-extra-imgwrap"><img id="modal-moodboard" src="" alt="Moodboard" style="width:100%;height:auto;display:block;"></div>
+        </div>
+        <div style="margin-top:14px;">
+          <p class="modal-extra-label">Plant plan, preview</p>
+          <div class="modal-extra-imgwrap"><img id="modal-plantplan" src="" alt="Plant plan" style="width:100%;height:auto;display:block;"></div>
+        </div>
+      </div>
       </div>
       <div class="modal-body">
         <button class="modal-close" onclick="closeModal()">&#x2715;</button>
@@ -541,30 +557,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
       </div>
     </div>
 
-    <!-- Moodboard and plant plan, shown for styles that have them -->
-    <div id="modal-extras" style="display:none;border-top:1px solid var(--border);">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;">
-
-        <!-- Moodboard, full -->
-        <div style="padding:24px;border-right:1px solid var(--border);">
-          <p style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--light);margin-bottom:12px;">Moodboard</p>
-          <div style="border-radius:4px;overflow:hidden;">
-            <img id="modal-moodboard" src="" alt="Moodboard" style="width:100%;height:auto;display:block;">
-          </div>
-        </div>
-
-        <!-- Plant plan, blurred -->
-        <div style="padding:24px;">
-          <p style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--light);margin-bottom:12px;">Plant plan, preview</p>
-          <div style="border-radius:4px;overflow:hidden;">
-            <img id="modal-plantplan" src="" alt="Plant plan" style="width:100%;height:auto;display:block;">
-          </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </div>
 </div>
 <script src="https://tally.so/widgets/embed.js"></script>
 <script>
