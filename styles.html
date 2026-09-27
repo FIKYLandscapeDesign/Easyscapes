@@ -427,38 +427,33 @@ footer{background:var(--dark);padding:52px 56px 28px;}
   </div>
 </div>
 
-<section style="background:var(--white);padding:78px 32px;border-top:1px solid #ececec;">
-  <div class="section-inner">
+<section style="background:var(--white);padding:78px 0;border-top:1px solid #ececec;overflow:hidden;">
+  <div class="section-inner" style="padding-left:32px;padding-right:32px;">
     <span class="eyebrow">Reviews</span>
-    <h2 class="big-title" style="margin-bottom:44px;">What people are saying</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;">
-      <div style="background:var(--bg);border:1px solid #ececec;border-radius:4px;padding:26px 24px;">
-        <p style="font-size:15px;line-height:1.72;color:var(--mid);margin:0 0 18px;">&ldquo;We used the Coastal design and it fit our block perfectly. It&rsquo;s low maintenance and gets so many compliments.&rdquo;</p>
-        <p style="font-size:13px;font-weight:700;color:var(--dark);margin:0;">Amy</p>
-        <p style="font-size:12px;color:var(--light);margin:2px 0 0;">Aldinga Beach</p>
-      </div>
-      <div style="background:var(--bg);border:1px solid #ececec;border-radius:4px;padding:26px 24px;">
-        <p style="font-size:15px;line-height:1.72;color:var(--mid);margin:0 0 18px;">&ldquo;We had no idea what plants to use out the front. It was genuinely easy, and we passed the design straight to a landscaper to install.&rdquo;</p>
-        <p style="font-size:13px;font-weight:700;color:var(--dark);margin:0;">Tom</p>
-        <p style="font-size:12px;color:var(--light);margin:2px 0 0;">Riverlea</p>
-      </div>
-      <div style="background:var(--bg);border:1px solid #ececec;border-radius:4px;padding:26px 24px;">
-        <p style="font-size:15px;line-height:1.72;color:var(--mid);margin:0 0 18px;">&ldquo;We knew what we wanted but no idea where to start. The plant list meant we weren&rsquo;t wandering the nursery guessing, and we&rsquo;ve done most of it ourselves.&rdquo;</p>
-        <p style="font-size:13px;font-weight:700;color:var(--dark);margin:0;">Sarah</p>
-        <p style="font-size:12px;color:var(--light);margin:2px 0 0;">Seaford</p>
-      </div>
-      <div style="background:var(--bg);border:1px solid #ececec;border-radius:4px;padding:26px 24px;">
-        <p style="font-size:15px;line-height:1.72;color:var(--mid);margin:0 0 18px;">&ldquo;I didn&rsquo;t want to spend thousands on a designer, but didn&rsquo;t want to get it wrong either. The render made a huge difference, and our landscaper quoted it straight away.&rdquo;</p>
-        <p style="font-size:13px;font-weight:700;color:var(--dark);margin:0;">James</p>
-        <p style="font-size:12px;color:var(--light);margin:2px 0 0;">Mount Barker</p>
-      </div>
-      <div style="background:var(--bg);border:1px solid #ececec;border-radius:4px;padding:26px 24px;">
-        <p style="font-size:15px;line-height:1.72;color:var(--mid);margin:0 0 18px;">&ldquo;I didn&rsquo;t think I could design our garden myself, but it was so straightforward. The plants suit the house perfectly, and people ask who designed it.&rdquo;</p>
-        <p style="font-size:13px;font-weight:700;color:var(--dark);margin:0;">Lauren</p>
-        <p style="font-size:12px;color:var(--light);margin:2px 0 0;">Henley Beach</p>
-      </div>
-    </div>
+    <h2 class="big-title" style="margin-bottom:0;">Gardens created with easyscapes</h2>
   </div>
+  <style>
+    .tmarquee{overflow:hidden;width:100%;margin-top:40px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);}
+    .tmarquee-track{display:flex;gap:18px;width:max-content;animation:tscroll 48s linear infinite;padding-left:18px;}
+    .tmarquee:hover .tmarquee-track{animation-play-state:paused;}
+    .tcard{flex:0 0 330px;background:var(--bg);border:1px solid #ececec;border-radius:4px;padding:26px 24px;}
+    .tcard .q{font-size:15px;line-height:1.72;color:var(--mid);margin:0 0 18px;}
+    .tcard .n{font-size:13px;font-weight:700;color:var(--dark);margin:0;}
+    .tcard .s{font-size:12px;color:var(--light);margin:2px 0 0;}
+    @keyframes tscroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  </style>
+  <div class="tmarquee"><div class="tmarquee-track">
+      <div class="tcard"><p class="q">&ldquo;We used the Coastal design and it fit our block perfectly. It&rsquo;s low maintenance and gets so many compliments.&rdquo;</p><p class="n">Amy</p><p class="s">Aldinga Beach</p></div>
+      <div class="tcard"><p class="q">&ldquo;We had no idea what plants to use out the front. It was genuinely easy, and we passed the design straight to a landscaper to install.&rdquo;</p><p class="n">Tom</p><p class="s">Riverlea</p></div>
+      <div class="tcard"><p class="q">&ldquo;We knew what we wanted but no idea where to start. The plant list meant we weren&rsquo;t wandering the nursery guessing, and we&rsquo;ve done most of it ourselves.&rdquo;</p><p class="n">Sarah</p><p class="s">Seaford</p></div>
+      <div class="tcard"><p class="q">&ldquo;I didn&rsquo;t want to spend thousands on a designer, but didn&rsquo;t want to get it wrong either. The render made a huge difference, and our landscaper quoted it straight away.&rdquo;</p><p class="n">James</p><p class="s">Mount Barker</p></div>
+      <div class="tcard"><p class="q">&ldquo;I didn&rsquo;t think I could design our garden myself, but it was so straightforward. The plants suit the house perfectly, and people ask who designed it.&rdquo;</p><p class="n">Lauren</p><p class="s">Henley Beach</p></div>
+      <div class="tcard"><p class="q">&ldquo;We used the Coastal design and it fit our block perfectly. It&rsquo;s low maintenance and gets so many compliments.&rdquo;</p><p class="n">Amy</p><p class="s">Aldinga Beach</p></div>
+      <div class="tcard"><p class="q">&ldquo;We had no idea what plants to use out the front. It was genuinely easy, and we passed the design straight to a landscaper to install.&rdquo;</p><p class="n">Tom</p><p class="s">Riverlea</p></div>
+      <div class="tcard"><p class="q">&ldquo;We knew what we wanted but no idea where to start. The plant list meant we weren&rsquo;t wandering the nursery guessing, and we&rsquo;ve done most of it ourselves.&rdquo;</p><p class="n">Sarah</p><p class="s">Seaford</p></div>
+      <div class="tcard"><p class="q">&ldquo;I didn&rsquo;t want to spend thousands on a designer, but didn&rsquo;t want to get it wrong either. The render made a huge difference, and our landscaper quoted it straight away.&rdquo;</p><p class="n">James</p><p class="s">Mount Barker</p></div>
+      <div class="tcard"><p class="q">&ldquo;I didn&rsquo;t think I could design our garden myself, but it was so straightforward. The plants suit the house perfectly, and people ask who designed it.&rdquo;</p><p class="n">Lauren</p><p class="s">Henley Beach</p></div>
+  </div></div>
 </section>
 
 </div>
