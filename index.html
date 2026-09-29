@@ -588,7 +588,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
         <!-- ORDER FORM (Tally + Stripe) -->
         <div style="background:#f8f8f6;border:1px solid #e4e4e0;border-radius:4px;padding:6px;margin-bottom:12px;overflow:hidden;">
           <div id="tally-scale" style="overflow:hidden;">
-            <iframe id="tally-frame" src="" loading="lazy" width="100%" height="620" frameborder="0" marginheight="0" marginwidth="0" title="Order your easyscapes design" style="border:none;display:block;background:transparent;width:111.1%;transform:scale(0.9);transform-origin:top left;"></iframe>
+            <iframe id="tally-frame" src="" loading="lazy" width="100%" height="620" frameborder="0" marginheight="0" marginwidth="0" title="Order your easyscapes design" style="border:none;display:block;background:transparent;width:121.95%;transform:scale(0.82);transform-origin:top left;"></iframe>
           </div>
         </div>
         <p style="font-size:11px;color:var(--light);line-height:1.6;margin-bottom:8px;">Your block dimensions, email and an optional photo of your home are collected in the form above, and payment is taken securely via Stripe. We design your plan for your block and send it to your inbox within one business day. By purchasing you agree to our <a href="terms.html" style="color:var(--dark);font-weight:600;text-decoration:underline;text-underline-offset:2px;">terms &amp; conditions</a>.</p>
@@ -604,7 +604,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
   function initTallyScale(){
     var tf=document.getElementById('tally-frame'), wrap=document.getElementById('tally-scale');
     if(tf && wrap && 'ResizeObserver' in window){
-      new ResizeObserver(function(){ wrap.style.height=(tf.offsetHeight*0.9)+'px'; }).observe(tf);
+      new ResizeObserver(function(){ wrap.style.height=(tf.offsetHeight*0.82)+'px'; }).observe(tf);
     }
   }
   if(document.readyState!=='loading') initTallyScale(); else document.addEventListener('DOMContentLoaded', initTallyScale);
