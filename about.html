@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
@@ -20,7 +21,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--dark);-webkit-font
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--bg);display:flex;align-items:center;justify-content:space-between;padding:0 56px;height:72px;border-bottom:1px solid var(--border);}
-.nav-logo{font-size:18px;font-weight:900;color:var(--dark);letter-spacing:-0.3px;text-decoration:none;}
+.nav-logo{font-family:'Poppins',sans-serif;font-size:18px;font-weight:800;color:var(--dark);letter-spacing:-0.3px;text-decoration:none;}
 .nav-logo sup{font-size:9px;font-weight:400;opacity:0.35;vertical-align:super;}
 .nav-links{display:flex;gap:48px;list-style:none;}
 .nav-links a{color:var(--dark);text-decoration:none;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;transition:opacity 0.2s;opacity:0.5;}
@@ -270,6 +271,19 @@ footer{background:var(--dark);padding:52px 56px 28px;}
   .hero-logo{font-size:60px;letter-spacing:-3px;}
 }
 </style>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0VX424QSK1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0VX424QSK1');
+    function esTrack(name, params){ try{ if(typeof gtag==='function') gtag('event', name, params||{}); }catch(e){} }
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","ypood8mvf6");
+  </script>
 </head>
 <body>
 <nav>
@@ -294,11 +308,20 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 <section style="background:var(--bg);min-height:calc(100vh - 72px);">
   <div class="section-inner">
     <span class="eyebrow">About</span>
-    <div class="body-text" style="max-width:720px;">
-      <p>The right garden can completely transform the look, feel and value of your home. Street appeal matters, and great landscape design makes all the difference.</p>
-      <p>Created to suit blocks from 8m to 15m wide, our professionally designed templates provide a simple and flexible approach to transforming the majority of Australian front gardens, without the complexity or expense of a fully custom landscape design.</p>
-      <p>Whether you're planning to do it yourself or hand the project over to a landscaper, <strong>easyscapes</strong> gives you the design inspiration, practical direction and tools to bring it all together, beautifully and with confidence.</p>
-      <p class="bold-line">Because it's one thing to imagine your new landscape, it's another to see it come to life.</p>
+    <div class="body-text" style="max-width:760px;">
+      <p style="font-size:18px;color:var(--dark);line-height:1.7;margin-bottom:26px;">A new Australian landscape design concept is making professional front garden design more accessible, affordable and easier to visualise, with personalised landscape plans delivered within one business day.</p>
+      <p><strong>easyscapes</strong> is a new online landscape design service offering professionally created, ready-to-use front garden design templates that can be personalised to suit individual homes.</p>
+      <p>Created to bridge the gap between DIY landscaping and traditional bespoke landscape design, easyscapes gives homeowners a clear blueprint for transforming their front garden, without the cost, complexity or lengthy design process often associated with engaging a landscape designer.</p>
+      <p>Designed for homes with frontages between 8 and 15 metres wide, customers simply choose the landscape style they love, provide details of their property and upload an image of their home. easyscapes then adapts the selected design to their property, providing a personalised landscape plan within one business day.</p>
+      <p class="bold-line" style="line-height:1.35;">Landscape design, made easy.<br>Six styles. One simple process.</p>
+      <p>With increasing focus on outdoor living, street appeal and creating beautiful, functional homes, easyscapes was developed for homeowners who want the confidence of a professionally considered landscape without commissioning a completely bespoke design costing thousands. easyscapes offers a curated collection of six distinctive landscape styles, designed around popular Australian residential garden aesthetics.</p>
+      <blockquote style="border-left:3px solid var(--dark);padding-left:22px;margin:30px 0;color:var(--mid);font-style:italic;line-height:1.75;">
+        <p style="margin-bottom:14px;">&ldquo;People often know the type of garden they love, but they don&rsquo;t necessarily know which plants to choose, where everything should go or how to bring the overall look together,&rdquo; said Fi &amp; Kylie, Co-Founders of easyscapes.</p>
+        <p>&ldquo;easyscapes takes away that uncertainty. We&rsquo;ve done the design work upfront, creating professionally considered landscape styles that homeowners can then personalise to their own property. Not every homeowner needs a fully bespoke landscape design process, but that doesn&rsquo;t mean they should have to compromise on good design. easyscapes sits in that space between DIY inspiration and traditional landscape architecture, providing people with a considered, practical starting point that has already been professionally designed at a very appealing price point.&rdquo;</p>
+      </blockquote>
+      <p>The service combines practical landscape layouts with curated planting selections and visual inspiration, giving homeowners the information they need to confidently take their design to a landscaper, nursery or begin implementing it themselves at their own pace.</p>
+      <p>Rather than spending hours saving inspiration images, trying to identify plants or wondering whether individual elements will work together, easyscapes provides homeowners with a coordinated design direction from the outset.</p>
+      <p class="bold-line" style="line-height:1.4;">easyscapes: choose your style, visualise your home,<br>and bring your new front garden to life.</p>
       <div style="margin-top:28px;"><a class="btn btn-dark" href="styles.html">Browse styles</a></div>
     </div>
     <div style="margin-top:44px;border-radius:4px;overflow:hidden;">
@@ -307,15 +330,6 @@ footer{background:var(--dark);padding:52px 56px 28px;}
   </div>
 </section>
 
-<section style="padding:8px 56px 72px;">
-  <div class="section-inner" style="max-width:760px;">
-    <span class="eyebrow">The designers</span>
-    <h2 class="big-title">About us</h2>
-    <div class="body-text" style="margin-top:24px;">
-      <p>We're two landscape designers who love gardens. We created <strong>easyscapes</strong> to make good front garden design simple, accessible and ready to use.</p>
-    </div>
-  </div>
-</section>
 <section style="background:var(--white);padding:78px 0;border-top:1px solid #ececec;overflow:hidden;">
   <div class="section-inner" style="padding-left:32px;padding-right:32px;">
     <span class="eyebrow">Reviews</span>
@@ -446,16 +460,17 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   var tdata = {
-    "contemporary-coastal":{name:"Contemporary Coastal",keywords:"Relaxed / Refined / Natural",price:"$159",stripe:"https://buy.stripe.com/REPLACE_contemporary_coastal",desc:"Blends relaxed seaside character with clean, modern design. Soft planting palettes, natural textures and layered greenery.",features:["moodboard","plant plan","3D render"],bg:"#8fa89a"},
-    "tropical":{name:"Tropical Resort",keywords:"Lush / Vibrant / Resort-Inspired",price:"$159",stripe:"https://buy.stripe.com/REPLACE_tropical_resort",desc:"A lush, resort-inspired retreat with layered foliage, bold textures and vibrant greenery.",features:["moodboard","plant plan","3D render"],bg:"#6b8f6b"},
-    "modern-australian":{name:"Modern Australian",keywords:"Textural / Contemporary / Resilient",price:"$159",stripe:"https://buy.stripe.com/REPLACE_modern_australian",desc:"Native and complementary plantings, clean lines and natural materials. Functional, low-maintenance and distinctly Australian.",features:["moodboard","plant plan","3D render"],bg:"#a89878"},
-    "palm-springs":{name:"Palm Springs",keywords:"Sculptural / Desert-Inspired / Bold",price:"$159",stripe:"https://buy.stripe.com/REPLACE_palm_springs",desc:"Desert luxury with sculptural plants, clean lines and a curated palette of textures.",features:["moodboard","plant plan","3D render"],bg:"#c4a882"},
-    "mediterranean":{name:"Mediterranean Charm",keywords:"Relaxed / Timeless / Organic",price:"$159",stripe:"https://buy.stripe.com/REPLACE_mediterranean_charm",desc:"Timeless elegance with relaxed outdoor living. Drought-tolerant species, natural stone and warm earthy tones.",features:["moodboard","plant plan","3D render"],bg:"#b0a882"},
-    "native-australian":{name:"Native Australian",keywords:"Native / Earthy / Sustainable",price:"$159",stripe:"https://buy.stripe.com/REPLACE_native_australian",desc:"Celebrates the beauty of Australian flora with textured foliage, seasonal colour and drought-tolerant plantings.",features:["moodboard","plant plan","3D render"],bg:"#8fa878"}
+    "contemporary-coastal":{name:"Contemporary Coastal",keywords:"Relaxed / Refined / Natural",price:"$159",stripe:"https://buy.stripe.com/REPLACE_contemporary_coastal",desc:"Blends relaxed seaside character with clean, modern design. Soft planting palettes, natural textures and layered greenery.",features:["style board","plant plan","3D render"],bg:"#8fa89a"},
+    "tropical":{name:"Tropical Resort",keywords:"Lush / Vibrant / Resort-Inspired",price:"$159",stripe:"https://buy.stripe.com/REPLACE_tropical_resort",desc:"A lush, resort-inspired retreat with layered foliage, bold textures and vibrant greenery.",features:["style board","plant plan","3D render"],bg:"#6b8f6b"},
+    "modern-australian":{name:"Modern Australian",keywords:"Textural / Contemporary / Resilient",price:"$159",stripe:"https://buy.stripe.com/REPLACE_modern_australian",desc:"Native and complementary plantings, clean lines and natural materials. Functional, low-maintenance and distinctly Australian.",features:["style board","plant plan","3D render"],bg:"#a89878"},
+    "palm-springs":{name:"Palm Springs",keywords:"Sculptural / Desert-Inspired / Bold",price:"$159",stripe:"https://buy.stripe.com/REPLACE_palm_springs",desc:"Desert luxury with sculptural plants, clean lines and a curated palette of textures.",features:["style board","plant plan","3D render"],bg:"#c4a882"},
+    "mediterranean":{name:"Mediterranean Charm",keywords:"Relaxed / Timeless / Organic",price:"$159",stripe:"https://buy.stripe.com/REPLACE_mediterranean_charm",desc:"Timeless elegance with relaxed outdoor living. Drought-tolerant species, natural stone and warm earthy tones.",features:["style board","plant plan","3D render"],bg:"#b0a882"},
+    "native-australian":{name:"Native Australian",keywords:"Native / Earthy / Sustainable",price:"$159",stripe:"https://buy.stripe.com/REPLACE_native_australian",desc:"Celebrates the beauty of Australian flora with textured foliage, seasonal colour and drought-tolerant plantings.",features:["style board","plant plan","3D render"],bg:"#8fa878"}
   };
 
   window.openModal = function(id) {
     var d = tdata[id]; if (!d) return;
+    esTrack('style_click', {style_name: d.name});
     document.getElementById('modal-keywords').textContent = d.keywords;
     document.getElementById('modal-name').textContent = d.name;
     document.getElementById('modal-price').textContent = d.price;
@@ -533,6 +548,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var overlay = document.getElementById('popup-overlay');
     if (!overlay) return;
     overlay.style.display = 'flex';
+    esTrack('exit_popup_shown');
     setCookie('es_popup_seen', '1', 30); // don't show again for 30 days
   }
   var esIsTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
@@ -559,6 +575,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var mcForm = document.getElementById('popup-mc-form');
   if (mcForm) {
     mcForm.addEventListener('submit', function() {
+      esTrack('popup_email_submit');
       setTimeout(function() {
         var s = document.getElementById('popup-signup');
         var t = document.getElementById('popup-signup-thanks');

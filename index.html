@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
@@ -20,7 +21,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--dark);-webkit-font
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--bg);display:flex;align-items:center;justify-content:space-between;padding:0 56px;height:72px;border-bottom:1px solid var(--border);}
-.nav-logo{font-size:18px;font-weight:900;color:var(--dark);letter-spacing:-0.3px;text-decoration:none;}
+.nav-logo{font-family:'Poppins',sans-serif;font-size:18px;font-weight:800;color:var(--dark);letter-spacing:-0.3px;text-decoration:none;}
 .nav-logo sup{font-size:9px;font-weight:400;opacity:0.35;vertical-align:super;}
 .nav-links{display:flex;gap:48px;list-style:none;}
 .nav-links a{color:var(--dark);text-decoration:none;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;transition:opacity 0.2s;opacity:0.5;}
@@ -38,10 +39,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--bg);displa
 
 /* HERO */
 .hero{padding:88px 56px 72px;max-width:1100px;margin:0 auto;text-align:center;}
-.hero-logo{font-size:clamp(72px,12vw,148px);font-weight:900;letter-spacing:-5px;line-height:0.88;color:var(--dark);margin-bottom:36px;}
+.hero-logo{font-family:'Poppins',sans-serif;font-size:clamp(60px,10vw,124px);font-weight:800;letter-spacing:-3px;line-height:0.92;color:var(--dark);margin-bottom:30px;}
 .hero-logo sup{font-size:0.15em;font-weight:400;opacity:0.3;vertical-align:super;letter-spacing:0;}
 .hero-tagline{font-size:18px;font-weight:600;color:var(--dark);margin-bottom:12px;line-height:1.5;}
-.hero-sub{font-size:15px;color:var(--mid);line-height:1.8;max-width:500px;margin:0 auto 44px;}
+.hero-sub{font-size:16px;color:var(--mid);line-height:1.75;max-width:640px;margin:0 auto 20px;}
+.hero-bold{font-size:16px;font-weight:700;color:var(--dark);max-width:640px;margin:0 auto 40px;}
 .hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
 
 /* STYLE CARD GRID */
@@ -272,9 +274,22 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 @media(max-width:600px){
   .styles-grid,.tgrid{grid-template-columns:1fr;}
   .footer-grid,.process-steps,.vis-steps{grid-template-columns:1fr;}
-  .hero-logo{font-size:60px;letter-spacing:-3px;}
+  .hero-logo{font-size:52px;letter-spacing:-2px;}
 }
 </style>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0VX424QSK1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0VX424QSK1');
+    function esTrack(name, params){ try{ if(typeof gtag==='function') gtag('event', name, params||{}); }catch(e){} }
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","ypood8mvf6");
+  </script>
 </head>
 <body>
 <nav>
@@ -298,8 +313,8 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 <div class="page-wrap">
 <div class="hero">
   <h1 class="hero-logo">easyscapes<sup>™</sup></h1>
-  <p class="hero-tagline">Professional front garden design, made simple, accessible and affordable.</p>
-  <p class="hero-sub">Choose your preferred landscape style, upload a photo of your home and front garden and watch your future outdoor space come to life. Our ready-to-use landscape design templates take the guesswork, and the high design costs, out of creating a beautifully considered front garden with standout street appeal.</p>
+  <p class="hero-sub">Choose a landscape style you love, upload a photo of your home, and we'll tailor the design to your space. <strong>easyscapes</strong> gives you a professionally considered front garden design, complete with planting plan, layout and visual inspiration, delivered within one business day.</p>
+  <p class="hero-bold">Beautiful design. Less guesswork. No bespoke design price tag.</p>
   <p style="font-size:15px;color:var(--dark);font-weight:600;margin-bottom:26px;letter-spacing:0.01em;">$159 introductory price&nbsp;&nbsp;&middot;&nbsp;&nbsp;$199 standard price</p>
   <div class="hero-ctas">
     <a class="btn btn-dark" href="styles.html">Choose your garden</a>
@@ -310,7 +325,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 <div class="styles-grid">
 <div class="style-card" onclick="openModal('contemporary-coastal')">
   <div class="style-card-bg" style="background:#8fa89a;">
-    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/contemporary-coastal-hero.png" alt="Contemporary Coastal" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);">
+    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/contemporary-coastal-hero.png" alt="Contemporary Coastal" onerror="this.style.display='none'" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);">
   </div>
   <div class="style-card-overlay">
     <h3>Contemporary coastal</h3>
@@ -319,10 +334,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 </div>
 <div class="style-card" onclick="openModal('tropical')">
   <div class="style-card-bg" style="background:#6b8f6b;">
-    <!-- TO ADD IMAGE: replace the div above with <img src="tropical.jpg" alt="Tropical Resort" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);"> -->
-    <div class="style-card-bg-placeholder">
-      <span>Tropical Resort</span>
-    </div>
+    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/tropical-hero.png" alt="Tropical Resort" onerror="this.style.display='none'" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);">
   </div>
   <div class="style-card-overlay">
     <h3>Tropical resort</h3>
@@ -331,10 +343,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 </div>
 <div class="style-card" onclick="openModal('modern-australian')">
   <div class="style-card-bg" style="background:#a89878;">
-    <!-- TO ADD IMAGE: replace the div above with <img src="modern-australian.jpg" alt="Modern Australian" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);"> -->
-    <div class="style-card-bg-placeholder">
-      <span>Modern Australian</span>
-    </div>
+    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/modern-australian-hero.png" alt="Modern Australian" onerror="this.style.display='none'" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);">
   </div>
   <div class="style-card-overlay">
     <h3>Modern Australian</h3>
@@ -343,10 +352,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 </div>
 <div class="style-card" onclick="openModal('palm-springs')">
   <div class="style-card-bg" style="background:#c4a882;">
-    <!-- TO ADD IMAGE: replace the div above with <img src="palm-springs.jpg" alt="Palm Springs" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);"> -->
-    <div class="style-card-bg-placeholder">
-      <span>Palm Springs</span>
-    </div>
+    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/palm-springs-hero.png" alt="Palm Springs" onerror="this.style.display='none'" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);">
   </div>
   <div class="style-card-overlay">
     <h3>Palm springs</h3>
@@ -355,10 +361,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 </div>
 <div class="style-card" onclick="openModal('mediterranean')">
   <div class="style-card-bg" style="background:#b0a882;">
-    <!-- TO ADD IMAGE: replace the div above with <img src="mediterranean.jpg" alt="Mediterranean Charm" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);"> -->
-    <div class="style-card-bg-placeholder">
-      <span>Mediterranean Charm</span>
-    </div>
+    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/mediterranean-hero.png" alt="Mediterranean Charm" onerror="this.style.display='none'" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);">
   </div>
   <div class="style-card-overlay">
     <h3>Mediterranean charm</h3>
@@ -367,10 +370,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 </div>
 <div class="style-card" onclick="openModal('native-australian')">
   <div class="style-card-bg" style="background:#8fa878;">
-    <!-- TO ADD IMAGE: replace the div above with <img src="native-australian.jpg" alt="Native Australian" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);"> -->
-    <div class="style-card-bg-placeholder">
-      <span>Native Australian</span>
-    </div>
+    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/native-australian-hero.png" alt="Native Australian" onerror="this.style.display='none'" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(3px);transform:scale(1.04);">
   </div>
   <div class="style-card-overlay">
     <h3>Native Australian</h3>
@@ -535,14 +535,14 @@ footer{background:var(--dark);padding:52px 56px 28px;}
         <div class="modal-img-fade">
           <div class="modal-img-lock">
             <p>🔒 Included with purchase</p>
-            <span>Complete plant plan, moodboard and 3D render</span>
+            <span>Complete plant plan, style board and 3D render</span>
           </div>
         </div>
       </div>
       <div id="modal-extras" style="display:none;">
         <div>
-          <p class="modal-extra-label">Moodboard</p>
-          <div class="modal-extra-imgwrap"><img id="modal-moodboard" src="" alt="Moodboard" style="width:100%;height:auto;display:block;"></div>
+          <p class="modal-extra-label">Style board</p>
+          <div class="modal-extra-imgwrap"><img id="modal-styleboard" src="" alt="Moodboard" style="width:100%;height:auto;display:block;"></div>
         </div>
         <div style="margin-top:14px;">
           <p class="modal-extra-label">Plant plan, preview</p>
@@ -629,16 +629,17 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   var tdata = {
-    "contemporary-coastal":{img:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/contemporary-coastal-hero.png",moodboard:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/moodboard-contemporary-coastal.png",plantplan:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/plant-plan-contemporary-coastal.png",name:"Contemporary Coastal",climate:"Thrives in coastal and temperate areas and takes sea breezes in its stride. We tailor the plant choices to your local conditions.",keywords:"Relaxed / Refined / Natural",price:"$159",stripe:"https://buy.stripe.com/7sY5kF5Sl2PL3q5cb06kg00",desc:"Blends relaxed seaside character with clean, modern design. Soft planting palettes, natural textures and layered greenery.",features:["plant plan","moodboard","3D render"],bg:"#8fa89a"},
-    "tropical":{img:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/tropical.png",moodboard:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/moodboard-tropical-draft.PNG",plantplan:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/easyscapes-plant-plan.png",name:"Tropical Resort",climate:"Looks its best in warm, humid climates where lush foliage flourishes. We tailor the plant choices to your local conditions.",keywords:"Lush / Vibrant / Resort-Inspired",price:"$159",stripe:"https://buy.stripe.com/7sY5kFbcF4XTe4J0si6kg01",desc:"A lush, resort-inspired retreat with layered foliage, bold textures and vibrant greenery.",features:["plant plan","moodboard","3D render"],bg:"#6b8f6b"},
-    "modern-australian":{moodboard:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/moodboard-modern-australian.png",plantplan:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/plant-plan-modern-australian.png",name:"Modern Australian",climate:"One of our most adaptable styles, comfortable in most climates and relaxed about heat and dry spells.",keywords:"Textural / Contemporary / Resilient",price:"$159",stripe:"https://buy.stripe.com/7sY6oJ1C5fCxf8Ncb06kg05",desc:"Native and complementary plantings, clean lines and natural materials. Functional, low-maintenance and distinctly Australian.",features:["plant plan","moodboard","3D render"],bg:"#a89878"},
-    "palm-springs":{moodboard:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/moodboard-palm-springs.png",plantplan:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/plant-plan-palm-springs.png",name:"Palm Springs",climate:"Made for warm, dry conditions, with drought-tolerant succulents and sculptural planting that love the sun. We tailor the plant choices to your local conditions.",keywords:"Sculptural / Desert-Inspired / Bold",price:"$159",stripe:"https://buy.stripe.com/5kQ28t3Kddup1hX1wm6kg03",desc:"Desert luxury with sculptural plants, clean lines and a curated palette of textures.",features:["plant plan","moodboard","3D render"],bg:"#c4a882"},
-    "mediterranean":{moodboard:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/moodboard-mediterranean.png",plantplan:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/plant-plan-mediterranean.png",name:"Mediterranean Charm",climate:"A natural fit for warm, dry summers and mild winters, with drought-tolerant planting that handles heat with ease.",keywords:"Relaxed / Timeless / Organic",price:"$159",stripe:"https://buy.stripe.com/14A00l80t9e9gcR8YO6kg02",desc:"Timeless elegance with relaxed outdoor living. Drought-tolerant species, natural stone and warm earthy tones.",features:["plant plan","moodboard","3D render"],bg:"#b0a882"},
-    "native-australian":{moodboard:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/moodboard-native-australian.png",plantplan:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/plant-plan-native-australian.png",name:"Native Australian",climate:"Suited to gardens right across the country, because we choose natives that belong to your region. It's our most water-wise, low-maintenance style and thrives in heat and drought.",keywords:"Native / Earthy / Sustainable",price:"$159",stripe:"https://buy.stripe.com/5kQ9AVeoR1LH7Gl4Iy6kg04",desc:"Celebrates the beauty of Australian flora with textured foliage, seasonal colour and drought-tolerant plantings.",features:["plant plan","moodboard","3D render"],bg:"#8fa878"}
+    "contemporary-coastal":{img:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/contemporary-coastal-hero.png",styleboard:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/styleboard-contemporary-coastal.png",plantplan:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/plant-plan-contemporary-coastal.png",name:"Contemporary Coastal",climate:"Thrives in coastal and temperate areas and takes sea breezes in its stride. We tailor the plant choices to your local conditions.",keywords:"Relaxed / Refined / Natural",price:"$159",stripe:"https://buy.stripe.com/7sY5kF5Sl2PL3q5cb06kg00",desc:"Blends relaxed seaside character with clean, modern design. Soft planting palettes, natural textures and layered greenery.",features:["plant plan","styleboard","3D render"],bg:"#8fa89a"},
+    "tropical":{img:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/tropical-hero.png",styleboard:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/styleboard-tropical.png",plantplan:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/plant-plan-tropical.png",name:"Tropical Resort",climate:"Looks its best in warm, humid climates where lush foliage flourishes. We tailor the plant choices to your local conditions.",keywords:"Lush / Vibrant / Resort-Inspired",price:"$159",stripe:"https://buy.stripe.com/7sY5kFbcF4XTe4J0si6kg01",desc:"A lush, resort-inspired retreat with layered foliage, bold textures and vibrant greenery.",features:["plant plan","styleboard","3D render"],bg:"#6b8f6b"},
+    "modern-australian":{img:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/modern-australian-hero.png",styleboard:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/styleboard-modern-australian.png",plantplan:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/plant-plan-modern-australian.png",name:"Modern Australian",climate:"One of our most adaptable styles, comfortable in most climates and relaxed about heat and dry spells.",keywords:"Textural / Contemporary / Resilient",price:"$159",stripe:"https://buy.stripe.com/7sY6oJ1C5fCxf8Ncb06kg05",desc:"Native and complementary plantings, clean lines and natural materials. Functional, low-maintenance and distinctly Australian.",features:["plant plan","styleboard","3D render"],bg:"#a89878"},
+    "palm-springs":{img:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/palm-springs-hero.png",styleboard:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/styleboard-palm-springs.png",plantplan:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/plant-plan-palm-springs.png",name:"Palm Springs",climate:"Made for warm, dry conditions, with drought-tolerant succulents and sculptural planting that love the sun. We tailor the plant choices to your local conditions.",keywords:"Sculptural / Desert-Inspired / Bold",price:"$159",stripe:"https://buy.stripe.com/5kQ28t3Kddup1hX1wm6kg03",desc:"Desert luxury with sculptural plants, clean lines and a curated palette of textures.",features:["plant plan","styleboard","3D render"],bg:"#c4a882"},
+    "mediterranean":{img:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/mediterranean-hero.png",styleboard:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/styleboard-mediterranean.png",plantplan:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/plant-plan-mediterranean.png",name:"Mediterranean Charm",climate:"A natural fit for warm, dry summers and mild winters, with drought-tolerant planting that handles heat with ease.",keywords:"Relaxed / Timeless / Organic",price:"$159",stripe:"https://buy.stripe.com/14A00l80t9e9gcR8YO6kg02",desc:"Timeless elegance with relaxed outdoor living. Drought-tolerant species, natural stone and warm earthy tones.",features:["plant plan","styleboard","3D render"],bg:"#b0a882"},
+    "native-australian":{img:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/native-australian-hero.png",styleboard:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/styleboard-native-australian.png",plantplan:"https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/plant-plan-native-australian.png",name:"Native Australian",climate:"Suited to gardens right across the country, because we choose natives that belong to your region. It's our most water-wise, low-maintenance style and thrives in heat and drought.",keywords:"Native / Earthy / Sustainable",price:"$159",stripe:"https://buy.stripe.com/5kQ9AVeoR1LH7Gl4Iy6kg04",desc:"Celebrates the beauty of Australian flora with textured foliage, seasonal colour and drought-tolerant plantings.",features:["plant plan","styleboard","3D render"],bg:"#8fa878"}
   };
 
   window.openModal = function(id) {
     var d = tdata[id]; if (!d) return;
+    esTrack('style_click', {style_name: d.name});
     document.getElementById('modal-keywords').textContent = d.keywords;
     document.getElementById('modal-name').textContent = d.name;
     document.getElementById('modal-price').textContent = d.price;
@@ -648,6 +649,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (existingImg) existingImg.remove();
     if (d.img) {
       var img = document.createElement('img');
+      img.onerror = function(){ this.remove(); };
       img.src = d.img;
       img.className = 'modal-render';
       img.style.cssText = 'width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(8px);transform:scale(1.06);';
@@ -669,17 +671,17 @@ document.addEventListener('DOMContentLoaded', function() {
       if (window.Tally && typeof window.Tally.loadEmbeds === 'function') { window.Tally.loadEmbeds(); }
       else { tallyFrame.src = tallySrc; }
     }
-    // Show moodboard and plant plan if available
+    // Show styleboard and plant plan if available
     var extras = document.getElementById('modal-extras');
-    var moodboardImg = document.getElementById('modal-moodboard');
+    var styleboardImg = document.getElementById('modal-styleboard');
     var plantplanImg = document.getElementById('modal-plantplan');
     var SHOW_MODAL_EXTRAS = true;
-    if (d.moodboard && extras && SHOW_MODAL_EXTRAS) {
+    if (d.styleboard && extras && SHOW_MODAL_EXTRAS) {
       extras.style.display = 'none'; // reveal only once the images actually load
-      moodboardImg.onload = function(){ if (extras) extras.style.display = 'block'; };
-      moodboardImg.onerror = function(){ if (extras) extras.style.display = 'none'; };
+      styleboardImg.onload = function(){ if (extras) extras.style.display = 'block'; };
+      styleboardImg.onerror = function(){ if (extras) extras.style.display = 'none'; };
       plantplanImg.onerror = function(){ if (extras) extras.style.display = 'none'; };
-      moodboardImg.src = d.moodboard;
+      styleboardImg.src = d.styleboard;
       plantplanImg.src = d.plantplan || '';
     } else if (extras) {
       extras.style.display = 'none';
@@ -848,6 +850,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var overlay = document.getElementById('popup-overlay');
     if (!overlay) return;
     overlay.style.display = 'flex';
+    esTrack('exit_popup_shown');
     setCookie('es_popup_seen', '1', 30); // don't show again for 30 days
   }
   var esIsTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
@@ -874,6 +877,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var mcForm = document.getElementById('popup-mc-form');
   if (mcForm) {
     mcForm.addEventListener('submit', function() {
+      esTrack('popup_email_submit');
       setTimeout(function() {
         var s = document.getElementById('popup-signup');
         var t = document.getElementById('popup-signup-thanks');
