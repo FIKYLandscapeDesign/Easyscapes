@@ -324,7 +324,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
           <p style="font-size:12px;color:var(--light);margin-top:8px;">Example plant plan, species names and quantities are revealed after purchase.</p>
         </div>
       </div>
-      <div class="faq-item"><div class="faq-q"><h4>Will the design suit my block?</h4><div class="faq-toggle">+</div></div><div class="faq-a">Our designs suit blocks between 8m and 15m wide. If your block falls outside this range, get in touch and we can advise.</div></div>
+      <div class="faq-item"><div class="faq-q"><h4>Will the design suit my block?</h4><div class="faq-toggle">+</div></div><div class="faq-a">Our designs suit blocks between 6m and 20m wide. If your block falls outside this range, get in touch and we can advise.</div></div>
       <div class="faq-item"><div class="faq-q"><h4>How do I pay?</h4><div class="faq-toggle">+</div></div><div class="faq-a">We use Stripe for secure payment. You enter your details and pay within the order form on the styles page, processed securely by Stripe. We accept all major credit and debit cards.</div></div>
       <div class="faq-item"><div class="faq-q"><h4>How do I get my design after I pay?</h4><div class="faq-toggle">+</div></div><div class="faq-a">After you order, you'll receive an email confirming we've got it. We then prepare your design and email it to you as high-quality PDF files within one business day.</div></div>
       <div class="faq-item"><div class="faq-q"><h4>Can I get a refund?</h4><div class="faq-toggle">+</div></div><div class="faq-a">Because each design is created for your block and delivered as a digital file, we are not able to offer refunds for change of mind or if a concept is not to your taste, so please read the style details and browse the examples before you buy. If your files are faulty or not as described, email us at hello@easyscapes.com.au and we will put it right.</div></div>
@@ -420,7 +420,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
           <ul class="modal-includes-list" id="modal-feats"></ul>
         </div>
         <p class="modal-desc" id="modal-desc"></p>
-        <p class="modal-block-note">Designed for blocks <strong>8m to 15m wide</strong>. Can usually be adapted to suit your site.</p>
+        <p class="modal-block-note">Designed for blocks <strong>6m to 20m wide</strong>. Can usually be adapted to suit your site.</p>
         <div style="font-size:11px;color:var(--light);line-height:1.6;margin-bottom:10px;">
           by purchasing you agree to our <a href="terms.html" style="color:var(--dark);font-weight:600;text-decoration:underline;text-underline-offset:2px;">Terms &amp; conditions</a>. All sales are final, no refunds once files are delivered.
         </div>
@@ -467,12 +467,12 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   var tdata = {
-    "contemporary-coastal":{name:"Contemporary Coastal",keywords:"Relaxed / Refined / Natural",price:"$159",stripe:"https://buy.stripe.com/REPLACE_contemporary_coastal",desc:"Blends relaxed seaside character with clean, modern design. Soft planting palettes, natural textures and layered greenery.",features:["style board","plant plan","3D render"],bg:"#8fa89a"},
-    "tropical":{name:"Tropical Resort",keywords:"Lush / Vibrant / Resort-Inspired",price:"$159",stripe:"https://buy.stripe.com/REPLACE_tropical_resort",desc:"A lush, resort-inspired retreat with layered foliage, bold textures and vibrant greenery.",features:["style board","plant plan","3D render"],bg:"#6b8f6b"},
-    "modern-australian":{name:"Modern Australian",keywords:"Textural / Contemporary / Resilient",price:"$159",stripe:"https://buy.stripe.com/REPLACE_modern_australian",desc:"Native and complementary plantings, clean lines and natural materials. Functional, low-maintenance and distinctly Australian.",features:["style board","plant plan","3D render"],bg:"#a89878"},
-    "palm-springs":{name:"Palm Springs",keywords:"Sculptural / Desert-Inspired / Bold",price:"$159",stripe:"https://buy.stripe.com/REPLACE_palm_springs",desc:"Desert luxury with sculptural plants, clean lines and a curated palette of textures.",features:["style board","plant plan","3D render"],bg:"#c4a882"},
-    "mediterranean":{name:"Mediterranean Charm",keywords:"Relaxed / Timeless / Organic",price:"$159",stripe:"https://buy.stripe.com/REPLACE_mediterranean_charm",desc:"Timeless elegance with relaxed outdoor living. Drought-tolerant species, natural stone and warm earthy tones.",features:["style board","plant plan","3D render"],bg:"#b0a882"},
-    "native-australian":{name:"Native Australian",keywords:"Native / Earthy / Sustainable",price:"$159",stripe:"https://buy.stripe.com/REPLACE_native_australian",desc:"Celebrates the beauty of Australian flora with textured foliage, seasonal colour and drought-tolerant plantings.",features:["style board","plant plan","3D render"],bg:"#8fa878"}
+    "contemporary-coastal":{name:"Contemporary Coastal",keywords:"Relaxed / Refined / Natural",price:"$159",stripe:"https://buy.stripe.com/REPLACE_contemporary_coastal",desc:"Blends relaxed seaside character with clean, modern design. Soft planting palettes, natural textures and layered greenery.",features:["Personalised visualisation","Style board","Plant plan"],bg:"#8fa89a"},
+    "tropical":{name:"Tropical Resort",keywords:"Lush / Vibrant / Resort-Inspired",price:"$159",stripe:"https://buy.stripe.com/REPLACE_tropical_resort",desc:"A lush, resort-inspired retreat with layered foliage, bold textures and vibrant greenery.",features:["Personalised visualisation","Style board","Plant plan"],bg:"#6b8f6b"},
+    "modern-australian":{name:"Modern Australian",keywords:"Textural / Contemporary / Resilient",price:"$159",stripe:"https://buy.stripe.com/REPLACE_modern_australian",desc:"Native and complementary plantings, clean lines and natural materials. Functional, low-maintenance and distinctly Australian.",features:["Personalised visualisation","Style board","Plant plan"],bg:"#a89878"},
+    "palm-springs":{name:"Palm Springs",keywords:"Sculptural / Desert-Inspired / Bold",price:"$159",stripe:"https://buy.stripe.com/REPLACE_palm_springs",desc:"Desert luxury with sculptural plants, clean lines and a curated palette of textures.",features:["Personalised visualisation","Style board","Plant plan"],bg:"#c4a882"},
+    "mediterranean":{name:"Mediterranean Charm",keywords:"Relaxed / Timeless / Organic",price:"$159",stripe:"https://buy.stripe.com/REPLACE_mediterranean_charm",desc:"Timeless elegance with relaxed outdoor living. Drought-tolerant species, natural stone and warm earthy tones.",features:["Personalised visualisation","Style board","Plant plan"],bg:"#b0a882"},
+    "native-australian":{name:"Native Australian",keywords:"Native / Earthy / Sustainable",price:"$159",stripe:"https://buy.stripe.com/REPLACE_native_australian",desc:"Celebrates the beauty of Australian flora with textured foliage, seasonal colour and drought-tolerant plantings.",features:["Personalised visualisation","Style board","Plant plan"],bg:"#8fa878"}
   };
 
   window.openModal = function(id) {
