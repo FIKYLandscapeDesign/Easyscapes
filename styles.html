@@ -638,7 +638,7 @@ document.addEventListener('DOMContentLoaded', function() {
     esTrack('style_click', {style_name: d.name});
     document.getElementById('modal-keywords').textContent = d.keywords;
     document.getElementById('modal-keywords').style.color = d.color || '#8a8a86';
-    var _mk=document.getElementById('modal-mockup'); if(_mk){ _mk.src='https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/mockup-'+id+'.png?v=2'; }
+    var _mk=document.getElementById('modal-mockup'); if(_mk){ _mk.style.display=''; _mk.src='https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/mockup-'+id+'.png'; }
     var _mp=document.getElementById('modal-pill'); if(_mp){_mp.textContent=d.name; _mp.style.background=d.color||'#1a1a1a';}
     var _sb=document.getElementById('modal-sb-panel'); if(_sb) _sb.style.background=d.color||'#1a1a1a';
     var _pl=document.getElementById('modal-pp-label'); if(_pl) _pl.style.color=d.color||'#1a1a1a';
