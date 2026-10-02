@@ -80,7 +80,10 @@ if (!paymentIntent || paymentIntent.status !== "succeeded") {
 
 const email = paymentIntent.receipt_email;
 
-const customerName = "";
+[EXTERNAL – BE CAUTIOUS]     [EXTERNE – SOYEZ VIGILANT]
+
+
+const customerName = paymentIntent.shipping?.name || paymentIntent.metadata?.customer_name || "Easyscapes Customer";
 
 if (!email) {
   console.error("Successful PaymentIntent has no customer email.");
