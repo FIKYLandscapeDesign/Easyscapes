@@ -360,12 +360,12 @@ footer{background:var(--dark);padding:52px 56px 28px;}
   <p style="font-size:14px;color:var(--mid);line-height:1.7;max-width:560px;margin-bottom:26px;">Every easyscapes design arrives as a considered package, ready to hand to a landscaper or build yourself.</p>
   <style>.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}@media(max-width:640px){.pkg-grid{grid-template-columns:repeat(2,1fr);}}</style>
   <div class="pkg-grid">
-    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/mockup-contemporary-coastal.png" alt="Contemporary Coastal package" onerror="this.style.display='none'" style="width:100%;height:auto;border-radius:6px;display:block;">
-    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/mockup-tropical.png" alt="Tropical Resort package" onerror="this.style.display='none'" style="width:100%;height:auto;border-radius:6px;display:block;">
-    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/mockup-modern-australian.png" alt="Modern Australian package" onerror="this.style.display='none'" style="width:100%;height:auto;border-radius:6px;display:block;">
-    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/mockup-palm-springs.png" alt="Palm Springs package" onerror="this.style.display='none'" style="width:100%;height:auto;border-radius:6px;display:block;">
-    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/mockup-mediterranean.png" alt="Mediterranean Charm package" onerror="this.style.display='none'" style="width:100%;height:auto;border-radius:6px;display:block;">
-    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/mockup-native-australian.png" alt="Native Australian package" onerror="this.style.display='none'" style="width:100%;height:auto;border-radius:6px;display:block;">
+    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/mockup-contemporary-coastal.png" alt="Contemporary Coastal package" onerror="this.style.display='none'" onclick="openFlatlay('contemporary-coastal')" style="width:100%;height:auto;border-radius:6px;display:block;cursor:pointer;">
+    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/mockup-tropical.png" alt="Tropical Resort package" onerror="this.style.display='none'" onclick="openFlatlay('tropical')" style="width:100%;height:auto;border-radius:6px;display:block;cursor:pointer;">
+    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/mockup-modern-australian.png" alt="Modern Australian package" onerror="this.style.display='none'" onclick="openFlatlay('modern-australian')" style="width:100%;height:auto;border-radius:6px;display:block;cursor:pointer;">
+    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/mockup-palm-springs.png" alt="Palm Springs package" onerror="this.style.display='none'" onclick="openFlatlay('palm-springs')" style="width:100%;height:auto;border-radius:6px;display:block;cursor:pointer;">
+    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/mockup-mediterranean.png" alt="Mediterranean Charm package" onerror="this.style.display='none'" onclick="openFlatlay('mediterranean')" style="width:100%;height:auto;border-radius:6px;display:block;cursor:pointer;">
+    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/mockup-native-australian.png" alt="Native Australian package" onerror="this.style.display='none'" onclick="openFlatlay('native-australian')" style="width:100%;height:auto;border-radius:6px;display:block;cursor:pointer;">
   </div>
 </section>
 
@@ -378,23 +378,23 @@ footer{background:var(--dark);padding:52px 56px 28px;}
     .tmarquee{overflow:hidden;width:100%;margin-top:40px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);}
     .tmarquee-track{display:flex;gap:18px;width:max-content;animation:tscroll 48s linear infinite;padding-left:18px;}
     .tmarquee:hover .tmarquee-track{animation-play-state:paused;}
-    .tcard{flex:0 0 330px;background:var(--bg);border:1px solid #ececec;border-radius:4px;padding:26px 24px;}
-    .tcard .q{font-size:15px;line-height:1.72;color:var(--mid);margin:0 0 18px;}
+    .tcard{flex:0 0 330px;background:var(--bg);border:1px solid #ececec;border-radius:4px;padding:26px 24px;height:350px;display:flex;flex-direction:column;}
+    .tcard .q{font-size:15px;line-height:1.72;color:var(--mid);margin:0 0 18px;flex:1;overflow:hidden;}
     .tcard .n{font-size:13px;font-weight:700;color:var(--dark);margin:0;}
     .tcard .s{font-size:12px;color:var(--light);margin:2px 0 0;}
     @keyframes tscroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
   </style>
   <div class="tmarquee"><div class="tmarquee-track">
       <div class="tcard"><p class="q">&ldquo;We used the Coastal design and it fit our block perfectly. It&rsquo;s low maintenance and gets so many compliments.&rdquo;</p><p class="n">Amy</p><p class="s">Aldinga Beach</p></div>
-      <div class="tcard"><p class="q">&ldquo;We had no idea what plants to use out the front. It was genuinely easy, and we passed the design straight to a landscaper to install.&rdquo;</p><p class="n">Tom</p><p class="s">Riverlea</p></div>
+      <div class="tcard"><p class="q">&ldquo;We had no idea what plants to use out the front. It was genuinely easy, and the plan gave us the exact number of plants we needed. We passed the design straight to a landscaper to install.&rdquo;</p><p class="n">Tom</p><p class="s">Riverlea</p></div>
       <div class="tcard"><p class="q">&ldquo;We knew what we wanted but no idea where to start. The plant list meant we weren&rsquo;t wandering the nursery guessing, and we&rsquo;ve done most of it ourselves.&rdquo;</p><p class="n">Sarah</p><p class="s">Seaford</p></div>
       <div class="tcard"><p class="q">&ldquo;I didn&rsquo;t want to spend thousands on a designer, but didn&rsquo;t want to get it wrong either. The render made a huge difference, and our landscaper quoted it straight away.&rdquo;</p><p class="n">James</p><p class="s">Mount Barker</p></div>
-      <div class="tcard"><p class="q">&ldquo;I didn&rsquo;t think I could design our garden myself, but it was so straightforward. The plants suit the house perfectly, and people ask who designed it.&rdquo;</p><p class="n">Lauren</p><p class="s">Henley Beach</p></div>
+      <div class="tcard"><p class="q">&ldquo;I didn&rsquo;t think I could design our garden myself, but it was so straightforward. The plants suit the house perfectly, and people ask who designed it.&rdquo;</p><p class="n">Lauren</p><p class="s">Henley Beach</p></div><div class="tcard"><img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/testimonial-john.png" alt="John's front garden in Lockleys" onerror="this.style.display='none'" style="width:100%;height:110px;object-fit:cover;border-radius:3px;margin:0 0 16px;display:block;flex:0 0 auto;"><p class="q">&ldquo;We wanted a front yard that was practical and suited our home, but our previous attempts never came together. easyscapes was the perfect fit. The plan listed the exact number of plants we needed, so there was no guesswork. Our landscaper brought it to life in a day, for less than we expected, and the hardy plants are thriving.&rdquo;</p><p class="n">John</p><p class="s">Lockleys</p></div>
       <div class="tcard"><p class="q">&ldquo;We used the Coastal design and it fit our block perfectly. It&rsquo;s low maintenance and gets so many compliments.&rdquo;</p><p class="n">Amy</p><p class="s">Aldinga Beach</p></div>
-      <div class="tcard"><p class="q">&ldquo;We had no idea what plants to use out the front. It was genuinely easy, and we passed the design straight to a landscaper to install.&rdquo;</p><p class="n">Tom</p><p class="s">Riverlea</p></div>
+      <div class="tcard"><p class="q">&ldquo;We had no idea what plants to use out the front. It was genuinely easy, and the plan gave us the exact number of plants we needed. We passed the design straight to a landscaper to install.&rdquo;</p><p class="n">Tom</p><p class="s">Riverlea</p></div>
       <div class="tcard"><p class="q">&ldquo;We knew what we wanted but no idea where to start. The plant list meant we weren&rsquo;t wandering the nursery guessing, and we&rsquo;ve done most of it ourselves.&rdquo;</p><p class="n">Sarah</p><p class="s">Seaford</p></div>
       <div class="tcard"><p class="q">&ldquo;I didn&rsquo;t want to spend thousands on a designer, but didn&rsquo;t want to get it wrong either. The render made a huge difference, and our landscaper quoted it straight away.&rdquo;</p><p class="n">James</p><p class="s">Mount Barker</p></div>
-      <div class="tcard"><p class="q">&ldquo;I didn&rsquo;t think I could design our garden myself, but it was so straightforward. The plants suit the house perfectly, and people ask who designed it.&rdquo;</p><p class="n">Lauren</p><p class="s">Henley Beach</p></div>
+      <div class="tcard"><p class="q">&ldquo;I didn&rsquo;t think I could design our garden myself, but it was so straightforward. The plants suit the house perfectly, and people ask who designed it.&rdquo;</p><p class="n">Lauren</p><p class="s">Henley Beach</p></div><div class="tcard"><img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/testimonial-john.png" alt="John's front garden in Lockleys" onerror="this.style.display='none'" style="width:100%;height:110px;object-fit:cover;border-radius:3px;margin:0 0 16px;display:block;flex:0 0 auto;"><p class="q">&ldquo;We wanted a front yard that was practical and suited our home, but our previous attempts never came together. easyscapes was the perfect fit. The plan listed the exact number of plants we needed, so there was no guesswork. Our landscaper brought it to life in a day, for less than we expected, and the hardy plants are thriving.&rdquo;</p><p class="n">John</p><p class="s">Lockleys</p></div>
   </div></div>
 </section>
 </div>
@@ -627,5 +627,16 @@ document.addEventListener('DOMContentLoaded', function() {
 })();
 </script>
 
+<div id="flatlay-lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.82);z-index:9500;align-items:center;justify-content:center;padding:24px;" onclick="if(event.target===this){this.style.display='none';document.body.style.overflow='';}">
+  <div style="max-width:700px;width:100%;text-align:center;">
+    <img id="flatlay-img" src="" alt="easyscapes package" style="width:100%;height:auto;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,0.45);">
+    <button onclick="flatlayGo()" style="margin-top:20px;background:#1a1a1a;color:#fff;border:none;padding:15px 38px;border-radius:4px;font-family:'Inter',sans-serif;font-size:15px;font-weight:700;letter-spacing:0.03em;cursor:pointer;">View this design</button>
+  </div>
+</div>
+<script>
+var _flatlaySlug='';
+function openFlatlay(slug){ _flatlaySlug=slug; document.getElementById('flatlay-img').src='https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/mockup-'+slug+'.png'; document.getElementById('flatlay-lightbox').style.display='flex'; document.body.style.overflow='hidden'; }
+function flatlayGo(){ document.getElementById('flatlay-lightbox').style.display='none'; document.body.style.overflow=''; if(typeof window.openModal==='function'){ window.openModal(_flatlaySlug); } else { window.location='styles.html'; } }
+</script>
 </body>
 </html>
