@@ -80,7 +80,7 @@ if (!paymentIntent || paymentIntent.status !== "succeeded") {
 
 const email = paymentIntent.receipt_email;
 
-[EXTERNAL – BE CAUTIOUS]     [EXTERNE – SOYEZ VIGILANT]
+
 
 
 const customerName = paymentIntent.shipping?.name || paymentIntent.metadata?.customer_name || "Easyscapes Customer";
