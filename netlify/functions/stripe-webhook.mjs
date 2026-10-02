@@ -114,7 +114,7 @@ const currency = (paymentIntent.currency || "aud").toUpperCase();
           customer_name: customerName,
           order_amount: amount,
           currency: currency,
-          stripe_session_id: session.id
+          stripe_session_id: paymentIntent.id
         }
       })
     }
@@ -126,7 +126,7 @@ const currency = (paymentIntent.currency || "aud").toUpperCase();
     return new Response("Email delivery request failed", { status: 500 });
   }
 
-  console.log(`Easyscapes confirmation requested for Stripe session ${session.id}`);
+  console.log(`Easyscapes confirmation requested for Stripe payment ${paymentIntent.id}`);
 
   return new Response("Success", { status: 200 });
 };
