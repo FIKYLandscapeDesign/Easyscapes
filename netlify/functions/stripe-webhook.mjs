@@ -67,34 +67,31 @@ export default async (req) => {
     return new Response("Invalid JSON", { status: 400 });
   }
 
-  // We only act when a Checkout payment has successfully completed.
-  if (event.type !== "checkout.session.completed") {
-    return new Response("Event ignored", { status: 200 });
-  }
+  // We only act when a payment has successfully completed.
+if (event.type !== "payment_intent.succeeded") {
+  return new Response("Event ignored", { status: 200 });
+}
 
-  const session = event.data?.object;
+const paymentIntent = event.data?.object;
 
-  if (!session || session.payment_status !== "paid") {
-    return new Response("Payment not complete", { status: 200 });
-  }
+if (!paymentIntent || paymentIntent.status !== "succeeded") {
+  return new Response("Payment not complete", { status: 200 });
+}
 
-  const email =
-    session.customer_details?.email ||
-    session.customer_email;
+const email = paymentIntent.receipt_email;
 
-  const customerName =
-    session.customer_details?.name || "";
+const customerName = "";
 
-  if (!email) {
-    console.error("Paid Checkout Session has no customer email.");
-    return new Response("Customer email missing", { status: 400 });
-  }
+if (!email) {
+  console.error("Successful PaymentIntent has no customer email.");
+  return new Response("Customer email missing", { status: 400 });
+}
 
-  const amount = session.amount_total
-    ? (session.amount_total / 100).toFixed(2)
-    : "";
+const amount = paymentIntent.amount_received
+  ? (paymentIntent.amount_received / 100).toFixed(2)
+  : "";
 
-  const currency = (session.currency || "aud").toUpperCase();
+const currency = (paymentIntent.currency || "aud").toUpperCase();
 
   const brevoResponse = await fetch(
     "https://api.brevo.com/v3/smtp/email",
