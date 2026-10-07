@@ -52,14 +52,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--bg);displa
 .style-card-bg{width:100%;height:100%;transition:transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);position:relative;display:flex;align-items:center;justify-content:center;}
 .style-card:hover .style-card-bg{transform:scale(1.05);}
 .style-card-bg img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;}
-.style-card-bg::after{content:"";position:absolute;left:0;right:0;bottom:0;height:20%;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);-webkit-mask-image:linear-gradient(to top,#000 45%,transparent);mask-image:linear-gradient(to top,#000 45%,transparent);z-index:1;pointer-events:none;}
+.style-card-blur{width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(7px);transform:scale(1.04);z-index:1;pointer-events:none;-webkit-mask-image:linear-gradient(to top,#000 0%,#000 14%,rgba(0,0,0,0) 30%);mask-image:linear-gradient(to top,#000 0%,#000 14%,rgba(0,0,0,0) 30%);}
+
 .style-card-bg-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;}
 .style-card-bg-placeholder span{font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);}
 /* Beige wash overlay */
-.style-card::before{content:"";position:absolute;inset:0;background:rgba(248,248,246,0.45);transition:opacity 0.5s ease;z-index:1;}
-.style-card:hover::before{opacity:0;}
+
+
 /* Hover reveal panel - curved top edge */
-.style-card::after{content:"";position:absolute;bottom:0;left:0;right:0;height:38%;background:linear-gradient(to bottom,transparent,rgba(248,248,246,0.55));z-index:1;pointer-events:none;}
+
 .style-card-overlay{
   position:absolute;bottom:0;left:0;right:0;
   padding:40px 28px 32px;
@@ -279,7 +280,6 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 }
 /* Touch devices have no hover: show the card name panel permanently */
 @media(hover:none){
-  .style-card::before{opacity:0;}
   .style-card-overlay{transform:translateY(15%);}
 }
 </style>
@@ -332,6 +332,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 <div class="style-card" onclick="openModal('contemporary-coastal')">
   <div class="style-card-bg" style="background:#8fa89a;">
     <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/contemporary-coastal-hero.png" alt="Contemporary Coastal" onerror="this.style.display='none'" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(0px);transform:scale(1.04);">
+    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/contemporary-coastal-hero.png" alt="" aria-hidden="true" onerror="this.style.display='none'" class="style-card-blur">
   </div>
   <div class="style-card-overlay">
     <h3>Contemporary coastal</h3>
@@ -341,6 +342,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 <div class="style-card" onclick="openModal('tropical')">
   <div class="style-card-bg" style="background:#6b8f6b;">
     <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/tropical-hero.png" alt="Tropical Resort" onerror="this.style.display='none'" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(0px);transform:scale(1.04);">
+    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/tropical-hero.png" alt="" aria-hidden="true" onerror="this.style.display='none'" class="style-card-blur">
   </div>
   <div class="style-card-overlay">
     <h3>Tropical resort</h3>
@@ -350,6 +352,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 <div class="style-card" onclick="openModal('modern-australian')">
   <div class="style-card-bg" style="background:#a89878;">
     <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/modern-australian-hero.png" alt="Modern Australian" onerror="this.style.display='none'" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(0px);transform:scale(1.04);">
+    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/modern-australian-hero.png" alt="" aria-hidden="true" onerror="this.style.display='none'" class="style-card-blur">
   </div>
   <div class="style-card-overlay">
     <h3>Modern Australian</h3>
@@ -359,6 +362,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 <div class="style-card" onclick="openModal('palm-springs')">
   <div class="style-card-bg" style="background:#c4a882;">
     <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/palm-springs-hero.png" alt="Palm Springs" onerror="this.style.display='none'" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(0px);transform:scale(1.04);">
+    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/palm-springs-hero.png" alt="" aria-hidden="true" onerror="this.style.display='none'" class="style-card-blur">
   </div>
   <div class="style-card-overlay">
     <h3>Palm springs</h3>
@@ -368,6 +372,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 <div class="style-card" onclick="openModal('mediterranean')">
   <div class="style-card-bg" style="background:#b0a882;">
     <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/mediterranean-hero.png" alt="Mediterranean Charm" onerror="this.style.display='none'" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(0px);transform:scale(1.04);">
+    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/mediterranean-hero.png" alt="" aria-hidden="true" onerror="this.style.display='none'" class="style-card-blur">
   </div>
   <div class="style-card-overlay">
     <h3>Mediterranean charm</h3>
@@ -377,6 +382,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
 <div class="style-card" onclick="openModal('native-australian')">
   <div class="style-card-bg" style="background:#8fa878;">
     <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/native-australian-hero.png" alt="Native Australian" onerror="this.style.display='none'" style="width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0;filter:blur(0px);transform:scale(1.04);">
+    <img src="https://raw.githubusercontent.com/FIKYLandscapeDesign/Easyscapes/main/native-australian-hero.png" alt="" aria-hidden="true" onerror="this.style.display='none'" class="style-card-blur">
   </div>
   <div class="style-card-overlay">
     <h3>Native Australian</h3>
