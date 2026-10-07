@@ -55,8 +55,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--bg);displa
 .style-card-bg-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;}
 .style-card-bg-placeholder span{font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);}
 /* Beige wash overlay */
-.style-card::before{content:"";position:absolute;inset:0;background:rgba(248,248,246,0.45);transition:opacity 0.5s ease;z-index:1;}
-.style-card:hover::before{opacity:0;}
+.style-card::before{content:"";position:absolute;inset:0;background:rgba(248,248,246,0.28);z-index:1;}
+
 /* Hover reveal panel - curved top edge */
 .style-card::after{content:"";position:absolute;bottom:0;left:0;right:0;height:45%;background:linear-gradient(to bottom,transparent,rgba(248,248,246,0.97));z-index:1;pointer-events:none;}
 .style-card-overlay{
@@ -555,7 +555,7 @@ footer{background:var(--dark);padding:52px 56px 28px;}
         </div>
         <div style="background:#fff;border:1px solid #ececec;border-radius:8px;overflow:hidden;">
           <div class="modal-img" id="modal-img" style="height:186px;position:relative;background:#e0dcd4;margin:0;border-radius:0;">
-            <div style="position:absolute;left:0;right:0;bottom:0;height:20%;backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);z-index:1;"></div>
+            <div style="position:absolute;left:0;right:0;bottom:0;height:30%;backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);z-index:1;"></div>
             <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(0,0,0,0.35));z-index:2;"></div>
             <p id="modal-vis-label" style="position:absolute;left:16px;bottom:14px;z-index:3;font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin:0;color:#fff;">01&nbsp;&nbsp;Personalised visualisation</p>
           </div>
@@ -867,6 +867,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function showEasyscapesPopup() {
+    return; // popup disabled
     if (getCookie('es_popup_seen')) return;
     var overlay = document.getElementById('popup-overlay');
     if (!overlay) return;

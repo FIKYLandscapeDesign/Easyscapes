@@ -551,6 +551,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function showEasyscapesPopup() {
+    return; // popup disabled
     if (getCookie('es_popup_seen')) return;
     var overlay = document.getElementById('popup-overlay');
     if (!overlay) return;
