@@ -48,7 +48,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--bg);displa
 
 /* STYLE CARD GRID */
 .styles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;background:var(--border);}
-.style-card{position:relative;aspect-ratio:16/9;overflow:hidden;cursor:pointer;}
+.style-card{position:relative;height:260px;overflow:hidden;cursor:pointer;}
 .style-card-bg{width:100%;height:100%;transition:transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);position:relative;display:flex;align-items:center;justify-content:center;}
 .style-card:hover .style-card-bg{transform:scale(1.05);}
 .style-card-bg img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;}
@@ -64,11 +64,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--bg);displa
   padding:40px 28px 32px;
   background:rgba(26,26,26,0.88);
   z-index:2;
-  transform:translateY(100%);
-  transition:transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+  transform:translateY(0);
   border-radius:28px 28px 0 0;
 }
-.style-card:hover .style-card-overlay{transform:translateY(0);}
+
 .style-card-overlay h3{
   font-size:clamp(24px,3vw,38px);
   font-weight:900;
